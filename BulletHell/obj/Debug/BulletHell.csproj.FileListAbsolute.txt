@@ -1,0 +1,9 @@
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\BulletHell.exe.config
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\BulletHell.exe
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\BulletHell.pdb
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.Properties.Resources.resources
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.GenerateResource.cache
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.exe
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.pdb
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csprojAssemblyReference.cache
