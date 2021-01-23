@@ -34,5 +34,11 @@ namespace BulletHell.Model {
         public GameObject() {
             Body = new PictureBox();
         }
+
+        public virtual void UpdateObject(object sender, EventArgs e) {
+            if (Controller != null) {
+                Controller.UpdateLocation(this);
+            }
+        }
     }
 }

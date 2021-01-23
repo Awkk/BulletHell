@@ -9,11 +9,7 @@ using BulletHell.Model;
 
 namespace BulletHell.Controller {
     class FollowCursor : IController {
-        private GameObject obj;
-        public FollowCursor(GameObject obj) {
-            this.obj = obj;
-        }
-        public void UpdateLocation() {
+        public void UpdateLocation(GameObject obj) {
             Point cursor = GameArea.MainForm.PointToClient(Control.MousePosition);
             obj.Location = new Point(cursor.X - obj.Width / 2, cursor.Y - obj.Height / 2);
         }

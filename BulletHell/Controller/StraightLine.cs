@@ -8,15 +8,13 @@ using BulletHell.Model;
 
 namespace BulletHell.Controller {
     class StraightLine : IController {
-        private GameObject obj;
         private int x;
         private int y;
-        public StraightLine(GameObject obj, int x, int y) {
-            this.obj = obj;
+        public StraightLine(int x, int y) {
             this.x = x;
             this.y = y;
         }
-        public void UpdateLocation() {
+        public void UpdateLocation(GameObject obj) {
             Point location = obj.Location;
             location.Offset(x, y);
             obj.Location = location;

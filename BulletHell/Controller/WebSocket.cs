@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BulletHell.Model;
 
 namespace BulletHell.Controller {
     class WebSocket : IController {
-        public void UpdateLocation() {
+        public void UpdateLocation(GameObject obj) {
             throw new NotImplementedException();
         }
     }

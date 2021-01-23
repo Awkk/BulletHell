@@ -4,14 +4,28 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace BulletHell.Model {
     class Bullet : GameObject {
         public const int DefaultWidth = 10;
         public const int DefaultHeight = 10;
-        public Bullet() {
+
+        private Game game;
+        public Bullet(Game game) {
             Size = new Size(DefaultWidth, DefaultHeight);
             BackColor = Color.Black;
+            this.game = game;
+        }
+
+        public override void UpdateObject(object sender, EventArgs e) {
+            base.UpdateObject(sender, e);
+            if (GameLogic.Collision(this, game.Player)) {
+                game.GameOver();
+            }
+            if (GameLogic.OutOfBorder(this)) {
+                GameArea.MainForm.Controls.Remove(Body);
+            }
         }
     }
 }

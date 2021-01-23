@@ -6,30 +6,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BulletHell.Controller;
+using BulletHell.View;
 
 namespace BulletHell.Model {
     class Game {
         public GameState State { get; set; }
-        public ArrayList Players { get; private set; }
-        public ArrayList Bullets { get; private set; }
+        public GameObject Player { get; private set; }
 
         public Game() {
             Reset();
         }
         public void Reset() {
             State = GameState.InPlay;
-            Players = new ArrayList();
-            Bullets = new ArrayList();
+            Player = new Player();
 
-            Player player = new Player();
-            player.Controller = new FollowCursor(player);
-            Players.Add(player);
-            GameArea.MainForm.Controls.Add(player.Body);
+            AddGameObject(Player, new FollowCursor());
+            AddGameObject(new Bullet(this), new StraightLine(1, 1));
+        }
 
-            Bullet bullet = new Bullet();
-            bullet.Controller = new StraightLine(bullet, 1, 1);
-            Bullets.Add(bullet);
-            GameArea.MainForm.Controls.Add(bullet.Body);
+        public void AddGameObject(GameObject obj, IController controller) {
+            obj.Controller = controller;
+            GameArea.MainForm.Controls.Add(obj.Body);
+            GameArea.GameTime.Tick += new EventHandler(obj.UpdateObject);
+        }
+
+        public void GameOver() {
+            State = GameState.GameOver;
         }
     }
 }
