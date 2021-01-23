@@ -11,18 +11,11 @@ using BulletHell.Model;
 
 namespace BulletHell.View {
     class Renderer {
-        private Game game;
-        public Renderer(Game game) {
-            this.game = game;
-
-            GameArea.GameTime.Tick += new EventHandler(Update);
-        }
         public void Update(object sender, EventArgs e) {
-            switch (game.State) {
+            switch (GameArea.State) {
                 case GameState.InPlay:
                     break;
                 case GameState.GameOver:
-                    GameArea.GameTime.Enabled = false;
                     break;
             }
         }

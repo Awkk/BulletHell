@@ -8,8 +8,8 @@ using BulletHell.Model;
 
 namespace BulletHell.Controller {
     class StraightLine : IController {
-        private int x;
-        private int y;
+        private readonly int x;
+        private readonly int y;
         public StraightLine(int x, int y) {
             this.x = x;
             this.y = y;

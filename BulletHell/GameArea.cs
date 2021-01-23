@@ -14,9 +14,12 @@ using BulletHell.View;
 
 
 namespace BulletHell {
+
+
     public partial class GameArea : Form {
-        public static GameArea MainForm { get; private set; }
-        public static Timer GameTime { get; private set; }
+        public static GameArea MainForm { get; set; }
+        public static Timer GameTime { get; set; }
+        public static GameState State { get; set; }
 
         public const int GameAreaWidth = 720;
         public const int GameAreaHeight = 720;
@@ -31,8 +34,13 @@ namespace BulletHell {
                 Enabled = true
             };
 
+            Renderer renderer = new Renderer();
+            GameTime.Tick += new EventHandler(renderer.Update);
+
             Game game = new Game();
-            Renderer renderer = new Renderer(game);
+            game.Start();
         }
     }
+
+
 }

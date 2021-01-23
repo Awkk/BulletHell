@@ -6,4 +6,3 @@ C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.G
 C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.CoreCompileInputs.cache
 C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.exe
 C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.pdb
-C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csprojAssemblyReference.cache

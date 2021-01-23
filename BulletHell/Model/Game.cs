@@ -10,14 +10,10 @@ using BulletHell.View;
 
 namespace BulletHell.Model {
     class Game {
-        public GameState State { get; set; }
-        public GameObject Player { get; private set; }
-
-        public Game() {
-            Reset();
-        }
-        public void Reset() {
-            State = GameState.InPlay;
+        public GameObject Player { get; set; }
+        public void Start() {
+            GameArea.GameTime.Enabled = true;
+            GameArea.State = GameState.InPlay;
             Player = new Player();
 
             AddGameObject(Player, new FollowCursor());
@@ -31,7 +27,8 @@ namespace BulletHell.Model {
         }
 
         public void GameOver() {
-            State = GameState.GameOver;
+            GameArea.GameTime.Enabled = false;
+            GameArea.State = GameState.GameOver;
         }
     }
 }

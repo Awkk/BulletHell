@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BulletHell.Model {
     class Enemy {
-        public void shoot() {
+        public void Shoot() {
 
         }
     }

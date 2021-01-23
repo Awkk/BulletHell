@@ -11,7 +11,7 @@ namespace BulletHell.Model {
         public const int DefaultWidth = 10;
         public const int DefaultHeight = 10;
 
-        private Game game;
+        private readonly Game game;
         public Bullet(Game game) {
             Size = new Size(DefaultWidth, DefaultHeight);
             BackColor = Color.Black;
