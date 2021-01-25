@@ -7,6 +7,8 @@ namespace BulletHell.Model {
         public const int DefaultHeight = 20;
         public Player() {
             Size = new Size(DefaultWidth, DefaultHeight);
+            BackColor = Color.Chocolate;
+
         }
     }
 }

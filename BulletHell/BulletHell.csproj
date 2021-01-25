@@ -188,5 +188,15 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Multicast\UDP.csproj">
+      <Project>{76b78bda-df55-459a-a0e1-867670ccf4c4}</Project>
+      <Name>UDP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Network\Network.csproj">
+      <Project>{2e79b549-8af7-43a9-b6d7-c8f5d38a0675}</Project>
+      <Name>Network</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
