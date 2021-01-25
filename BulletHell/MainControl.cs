@@ -76,15 +76,6 @@ namespace BulletHell {
 
         }
 
-        private void add_option_MouseClick(object sender, MouseEventArgs e) {
-
-        }
-
-        private void add_option_Click(object sender, EventArgs e) {
-            GameArea game = new GameArea();
-            game.Show();
-        }
-
         private void options_option_Click(object sender, EventArgs e) {
             if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("OptionControl")) {
                 OptionControl oc = new OptionControl();
@@ -93,7 +84,6 @@ namespace BulletHell {
             }
             GameMenu.Instance.PnlContainer.Controls["OptionControl"].BringToFront();
         }
-
 
         private void quit_option_Click(object sender, EventArgs e) {
             Application.Exit();
