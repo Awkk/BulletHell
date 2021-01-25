@@ -91,16 +91,6 @@ namespace BulletHell.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap addServerTitle1 {
-            get {
-                object obj = ResourceManager.GetObject("addServerTitle1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream backgroundSound {
@@ -161,6 +151,16 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel2 {
+            get {
+                object obj = ResourceManager.GetObject("Cancel2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CancelHighlight {
             get {
                 object obj = ResourceManager.GetObject("CancelHighlight", resourceCulture);
@@ -171,9 +171,39 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CancelHighlight2 {
+            get {
+                object obj = ResourceManager.GetObject("CancelHighlight2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DirectConnect {
             get {
                 object obj = ResourceManager.GetObject("DirectConnect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Done {
+            get {
+                object obj = ResourceManager.GetObject("Done", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DoneHighlight {
+            get {
+                object obj = ResourceManager.GetObject("DoneHighlight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -194,6 +224,16 @@ namespace BulletHell.Properties {
         internal static System.Drawing.Bitmap JoinServerHighlight {
             get {
                 object obj = ResourceManager.GetObject("JoinServerHighlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JoinServerTitle {
+            get {
+                object obj = ResourceManager.GetObject("JoinServerTitle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -264,6 +304,36 @@ namespace BulletHell.Properties {
         internal static System.Drawing.Bitmap QuitOption {
             get {
                 object obj = ResourceManager.GetObject("QuitOption", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ServerAddress {
+            get {
+                object obj = ResourceManager.GetObject("ServerAddress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ServerName {
+            get {
+                object obj = ResourceManager.GetObject("ServerName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ServersList {
+            get {
+                object obj = ResourceManager.GetObject("ServersList", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

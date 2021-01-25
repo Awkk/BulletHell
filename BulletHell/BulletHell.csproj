@@ -67,6 +67,12 @@
     <Compile Include="GameMenu.Designer.cs">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="JoinServerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JoinServerControl.Designer.cs">
+      <DependentUpon>JoinServerControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <EmbeddedResource Include="GameMenu.resx">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JoinServerControl.resx">
+      <DependentUpon>JoinServerControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +152,11 @@
     <None Include="Resources\OptionsOption.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ServersList.png" />
+    <None Include="Resources\ServerName1.png" />
+    <None Include="Resources\ServerAddress1.png" />
+    <None Include="Resources\ServerAddress.png" />
+    <None Include="Resources\ServerName.png" />
     <None Include="Resources\QuitOption.png" />
     <None Include="Resources\QuitHighlight.png" />
     <None Include="Resources\sound off.png" />
@@ -160,7 +174,11 @@
     <None Include="Resources\JoinServer.png" />
     <None Include="Resources\backgroundSound.wav" />
     <None Include="Resources\addServerTitle.png" />
-    <None Include="Resources\addServerTitle1.png" />
+    <None Include="Resources\Cancel2.png" />
+    <None Include="Resources\Done.png" />
+    <None Include="Resources\JoinServerTitle.png" />
+    <None Include="Resources\CancelHighlight2.png" />
+    <None Include="Resources\DoneHighlight.png" />
     <Content Include="Resources\OptionsHighlight.png" />
     <None Include="Resources\DirectConnect.png" />
     <None Include="Resources\AddServer.png" />

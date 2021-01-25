@@ -12,11 +12,10 @@ using System.Windows.Forms;
 
 namespace BulletHell
 {
-    public partial class AddServerControl : UserControl
+    public partial class JoinServerControl : UserControl
     {
         private SoundPlayer buttonSound;
-
-        public AddServerControl()
+        public JoinServerControl()
         {
             InitializeComponent();
             buttonSound = new SoundPlayer(GetResoucePath("buttonSound.wav"));
@@ -27,7 +26,6 @@ namespace BulletHell
             string currentPath = Path.GetDirectoryName(Application.ExecutablePath);
             return Path.Combine(Path.GetDirectoryName(Path.GetDirectoryName(currentPath)), "Resources", file);
         }
-
         private void done_option_MouseHover(object sender, EventArgs e)
         {
             done_option.Image = Properties.Resources.DoneHighlight;
@@ -54,5 +52,7 @@ namespace BulletHell
         {
             GameMenu.Instance.PnlContainer.Controls["MainControl"].BringToFront();
         }
+
+
     }
 }

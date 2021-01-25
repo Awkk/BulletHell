@@ -53,7 +53,7 @@ namespace BulletHell
             
             InitializeComponent();
             wplayer.URL = (@"C:\Users\kimer\Source\Repos\BulletHell\BulletHell\Resources\backgroundSound.wav");
-            wplayer.settings.volume = 30;
+            wplayer.settings.volume = 15;
             wplayer.controls.play();
             axWindowsMediaPlayer1.Hide();
         }
