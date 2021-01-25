@@ -30,17 +30,17 @@ namespace BulletHell
         private void InitializeComponent()
         {
             this.option_menu = new System.Windows.Forms.Panel();
+            this.cancel_option = new System.Windows.Forms.PictureBox();
             this.btn_sound = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cancel_option = new System.Windows.Forms.PictureBox();
             this.option_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cancel_option)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_sound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cancel_option)).BeginInit();
             this.SuspendLayout();
             // 
             // option_menu
@@ -57,6 +57,19 @@ namespace BulletHell
             this.option_menu.Name = "option_menu";
             this.option_menu.Size = new System.Drawing.Size(948, 593);
             this.option_menu.TabIndex = 1;
+            // 
+            // cancel_option
+            // 
+            this.cancel_option.BackgroundImage = global::BulletHell.Properties.Resources.Cancel;
+            this.cancel_option.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancel_option.Location = new System.Drawing.Point(411, 464);
+            this.cancel_option.Name = "cancel_option";
+            this.cancel_option.Size = new System.Drawing.Size(148, 40);
+            this.cancel_option.TabIndex = 17;
+            this.cancel_option.TabStop = false;
+            this.cancel_option.Click += new System.EventHandler(this.cancel_option_Click);
+            this.cancel_option.MouseLeave += new System.EventHandler(this.cancel_option_MouseLeave);
+            this.cancel_option.MouseHover += new System.EventHandler(this.cancel_option_MouseHover);
             // 
             // btn_sound
             // 
@@ -78,7 +91,7 @@ namespace BulletHell
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(286, 45);
             this.trackBar1.TabIndex = 2;
-            this.trackBar1.Value = 30;
+            this.trackBar1.Value = 15;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // pictureBox2
@@ -101,19 +114,6 @@ namespace BulletHell
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // cancel_option
-            // 
-            this.cancel_option.BackgroundImage = global::BulletHell.Properties.Resources.Cancel;
-            this.cancel_option.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel_option.Location = new System.Drawing.Point(411, 464);
-            this.cancel_option.Name = "cancel_option";
-            this.cancel_option.Size = new System.Drawing.Size(148, 40);
-            this.cancel_option.TabIndex = 17;
-            this.cancel_option.TabStop = false;
-            this.cancel_option.Click += new System.EventHandler(this.cancel_option_Click);
-            this.cancel_option.MouseLeave += new System.EventHandler(this.cancel_option_MouseLeave);
-            this.cancel_option.MouseHover += new System.EventHandler(this.cancel_option_MouseHover);
-            // 
             // OptionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,11 +124,11 @@ namespace BulletHell
             this.Size = new System.Drawing.Size(1025, 735);
             this.option_menu.ResumeLayout(false);
             this.option_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cancel_option)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_sound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cancel_option)).EndInit();
             this.ResumeLayout(false);
 
         }

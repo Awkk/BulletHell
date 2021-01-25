@@ -122,6 +122,7 @@ namespace BulletHell
             this.join_option.Size = new System.Drawing.Size(199, 41);
             this.join_option.TabIndex = 7;
             this.join_option.TabStop = false;
+            this.join_option.Click += new System.EventHandler(this.join_option_Click);
             this.join_option.MouseLeave += new System.EventHandler(this.join_option_MouseLeave);
             this.join_option.MouseHover += new System.EventHandler(this.join_option_MouseHover);
             // 
