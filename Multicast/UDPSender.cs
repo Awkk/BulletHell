@@ -6,20 +6,21 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Network;
 
-namespace Multicast {
-    class MulticastSender {
+namespace UDP {
+    class UDPSender: ISender{
         private readonly Socket mcastSocket;
         private readonly IPEndPoint endPoint;
 
-        public MulticastSender(string ipAddress, int port) {
+        public UDPSender(string ipAddress, int port) {
             endPoint = new IPEndPoint(IPAddress.Parse(ipAddress), port);
             mcastSocket = new Socket(AddressFamily.InterNetwork,
                          SocketType.Dgram,
                          ProtocolType.Udp);
         }
 
-        public void BroadcastMessage(string message) {
+        public void Send(string message) {
             try {
                 mcastSocket.SendTo(Encoding.ASCII.GetBytes(message), endPoint);
                 Debug.WriteLine("Multicast data sent.....");

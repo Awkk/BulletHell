@@ -51,7 +51,6 @@
     <Compile Include="Controller\FollowCursor.cs" />
     <Compile Include="Controller\UdpSender.cs" />
     <Compile Include="Controller\WebSocket.cs" />
-    <Compile Include="MessageRecieveThread.cs" />
     <Compile Include="Model\Bullet.cs" />
     <Compile Include="Model\Enemy.cs" />
     <Compile Include="Model\Game.cs" />
@@ -91,9 +90,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Multicast\Multicast.csproj">
+    <ProjectReference Include="..\Multicast\UDP.csproj">
       <Project>{76b78bda-df55-459a-a0e1-867670ccf4c4}</Project>
-      <Name>Multicast</Name>
+      <Name>UDP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Network\Network.csproj">
+      <Project>{2e79b549-8af7-43a9-b6d7-c8f5d38a0675}</Project>
+      <Name>Network</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

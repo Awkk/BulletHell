@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BulletHell.Model;
 using BulletHell.View;
-using Multicast;
+using Network;
+using UDP;
 using Timer = System.Windows.Forms.Timer;
 
 namespace BulletHell {
@@ -42,8 +43,8 @@ namespace BulletHell {
             Game game = new Game();
             game.Start();
 
-            MulticastListener listener = new MulticastListener("224.168.100.2", 11000);
-            listener.MessageRecieved += new MulticastListener.MessageRecievedHandler(MessageRecieved);
+            IListener listener = new UDPListener("224.168.100.2", 11000);
+            listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
 
             Thread recieveMessageThread = new Thread(new ThreadStart(listener.ReceiveMessage)) {
                 IsBackground = true

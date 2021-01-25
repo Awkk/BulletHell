@@ -6,12 +6,13 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Network;
 
-namespace Multicast {
-    public class MulticastListener {
+namespace UDP {
+    public class UDPListener : IListener {
         private readonly Socket mcastSocket;
 
-        public MulticastListener(string ipAddress, int port) {
+        public UDPListener(string ipAddress, int port) {
             try {
                 mcastSocket = new Socket(AddressFamily.InterNetwork,
                                          SocketType.Dgram,
@@ -49,8 +50,6 @@ namespace Multicast {
                 Debug.WriteLine(e.ToString());
             }
         }
-
-        public delegate void MessageRecievedHandler(object sender, string message);
 
         public event MessageRecievedHandler MessageRecieved;
 
