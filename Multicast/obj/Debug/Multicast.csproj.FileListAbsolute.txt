@@ -1,0 +1,5 @@
+C:\Users\Andrew\source\repos\BulletHell\Multicast\bin\Debug\Multicast.dll
+C:\Users\Andrew\source\repos\BulletHell\Multicast\bin\Debug\Multicast.pdb
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\Multicast.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\Multicast.dll
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\Multicast.pdb

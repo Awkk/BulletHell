@@ -49,8 +49,9 @@
     <Compile Include="Controller\StraightLine.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\FollowCursor.cs" />
-    <Compile Include="Controller\UDP.cs" />
+    <Compile Include="Controller\UdpSender.cs" />
     <Compile Include="Controller\WebSocket.cs" />
+    <Compile Include="MessageRecieveThread.cs" />
     <Compile Include="Model\Bullet.cs" />
     <Compile Include="Model\Enemy.cs" />
     <Compile Include="Model\Game.cs" />
@@ -88,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Multicast\Multicast.csproj">
+      <Project>{76b78bda-df55-459a-a0e1-867670ccf4c4}</Project>
+      <Name>Multicast</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
