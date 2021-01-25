@@ -26,24 +26,27 @@ namespace BulletHell {
 
         public const int GameAreaWidth = 1025;
         public const int GameAreaHeight = 720;
-        
+
+        private Game game;
+
 
         public GameArea() {
+            InitializeComponent();
+            FormClosing += new FormClosingEventHandler(GameArea_FormClosing);
+
             MainForm = this;
             Height = GameAreaHeight;
             Width = GameAreaWidth;
             StartPosition = FormStartPosition.CenterScreen;
 
             GameTime = new Timer {
-                Interval = 10,
-                Enabled = true
+                Interval = 10
             };
 
             Renderer renderer = new Renderer();
             GameTime.Tick += new EventHandler(renderer.Update);
 
-            Game game = new Game();
-            game.Start();
+            game = new Game();
 
             IListener listener = new UDPListener("224.168.100.2", 11000);
             listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
@@ -60,17 +63,23 @@ namespace BulletHell {
         }
 
 
-        void ChangeCursor()
-        {
+        void ChangeCursor() {
             Bitmap bmp = new Bitmap(Properties.Resources.p1cursor);
             Cursor c = new Cursor(bmp.GetHicon());
 
             this.Cursor = c;
         }
+        private void GameArea_Load(object sender, EventArgs e) {
+        }
 
-        private void GameArea_Load(object sender, EventArgs e)
-        {
+        private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
+            game.GameOver();
+        }
 
+        private void GameArea_KeyDown(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Space) {
+                game.Start();
+            }
         }
     }
 

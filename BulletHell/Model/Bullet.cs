@@ -20,11 +20,13 @@ namespace BulletHell.Model {
 
         public override void UpdateObject(object sender, EventArgs e) {
             base.UpdateObject(sender, e);
+            Debug.WriteLine("bullet update");
             if (GameLogic.Collision(this, game.Player)) {
                 game.GameOver();
             }
             if (GameLogic.OutOfBorder(this)) {
                 GameArea.MainForm.Controls.Remove(Body);
+                GameArea.GameTime.Tick -= Handler;
             }
         }
     }

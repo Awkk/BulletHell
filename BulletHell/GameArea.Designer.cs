@@ -55,6 +55,7 @@ namespace BulletHell {
             this.Name = "GameArea";
             this.Text = "8";
             this.Load += new System.EventHandler(this.GameArea_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameArea_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

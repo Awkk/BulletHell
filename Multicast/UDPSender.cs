@@ -9,7 +9,7 @@ using System.Diagnostics;
 using Network;
 
 namespace UDP {
-    class UDPSender: ISender{
+    class UDPSender : ISender {
         private readonly Socket mcastSocket;
         private readonly IPEndPoint endPoint;
 
@@ -23,7 +23,7 @@ namespace UDP {
         public void Send(string message) {
             try {
                 mcastSocket.SendTo(Encoding.ASCII.GetBytes(message), endPoint);
-                Debug.WriteLine("Multicast data sent.....");
+                Debug.WriteLine("Sent: " + message);
             } catch (Exception e) {
                 Debug.WriteLine("\n" + e.ToString());
             }

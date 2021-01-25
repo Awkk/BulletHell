@@ -11,6 +11,8 @@ namespace BulletHell.Model {
     class GameObject {
         public PictureBox Body { get; private set; }
         public IController Controller { get; set; }
+
+        public EventHandler Handler { get; set; }
         public Rectangle Bounds { get { return Body.Bounds; } }
         public int Height { get { return Body.Size.Height; } }
         public int Width { get { return Body.Size.Width; } }

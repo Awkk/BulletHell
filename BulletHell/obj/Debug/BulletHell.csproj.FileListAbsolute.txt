@@ -22,3 +22,4 @@ C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.C
 C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.CopyComplete
 C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.exe
 C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.pdb
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csprojAssemblyReference.cache

@@ -22,8 +22,9 @@ namespace BulletHell.Model {
 
         public void AddGameObject(GameObject obj, IController controller) {
             obj.Controller = controller;
+            obj.Handler = new EventHandler(obj.UpdateObject);
+            GameArea.GameTime.Tick += obj.Handler;
             GameArea.MainForm.Controls.Add(obj.Body);
-            GameArea.GameTime.Tick += new EventHandler(obj.UpdateObject);
         }
 
         public void GameOver() {
