@@ -17,8 +17,10 @@ namespace BulletHell {
     public partial class GameArea : Form {
         public static GameArea MainForm { get; private set; }
 
-        public const int GameAreaWidth = 720;
+        public const int GameAreaWidth = 1025;
         public const int GameAreaHeight = 720;
+        
+
         public GameArea() {
             MainForm = this;
             Height = GameAreaHeight;
@@ -26,8 +28,24 @@ namespace BulletHell {
             StartPosition = FormStartPosition.CenterScreen;
 
             Game game = new Game();
+            ChangeCursor();
+           
             Renderer renderer = new Renderer(game);
             renderer.Start();
         }
+        void ChangeCursor()
+        {
+            Bitmap bmp = new Bitmap(Properties.Resources.p1cursor);
+            Cursor c = new Cursor(bmp.GetHicon());
+
+            this.Cursor = c;
+        }
+
+        private void GameArea_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+
+
 }

@@ -28,6 +28,9 @@ namespace BulletHell.View {
         }
         public void Update(object sender, EventArgs e) {
             switch (game.State) {
+                //case GameState.Menu:       Menu to be added to Enums GameState.cs
+                        //Start GameMenu, with Control Functions.
+
                 case GameState.InPlay:
                     GameArea.MainForm.Invalidate();
                     foreach (GameObject player in game.Players) {
