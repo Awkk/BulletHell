@@ -59,7 +59,7 @@
     <Compile Include="Controller\StraightLine.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\FollowCursor.cs" />
-    <Compile Include="Controller\UDP.cs" />
+    <Compile Include="Controller\UdpSender.cs" />
     <Compile Include="Controller\WebSocket.cs" />
     <Compile Include="GameMenu.cs">
       <SubType>Form</SubType>

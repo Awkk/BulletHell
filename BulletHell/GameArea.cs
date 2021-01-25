@@ -7,11 +7,14 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BulletHell.Model;
 using BulletHell.View;
-
+using Network;
+using UDP;
+using Timer = System.Windows.Forms.Timer;
 
 namespace BulletHell {
 
@@ -32,7 +35,7 @@ namespace BulletHell {
             StartPosition = FormStartPosition.CenterScreen;
 
             GameTime = new Timer {
-                Interval = 1,
+                Interval = 10,
                 Enabled = true
             };
 
@@ -41,7 +44,22 @@ namespace BulletHell {
 
             Game game = new Game();
             game.Start();
+
+            IListener listener = new UDPListener("224.168.100.2", 11000);
+            listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
+
+            Thread recieveMessageThread = new Thread(new ThreadStart(listener.ReceiveMessage)) {
+                IsBackground = true
+            };
+
+            recieveMessageThread.Start();
         }
+
+        public static void MessageRecieved(object sender, string message) {
+            Debug.WriteLine(message);
+        }
+
+
         void ChangeCursor()
         {
             Bitmap bmp = new Bitmap(Properties.Resources.p1cursor);
