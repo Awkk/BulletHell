@@ -10,7 +10,7 @@ namespace BulletHell {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameArea());
+            Application.Run(new GameMenu());
         }
     }
 }

@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,11 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddServerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddServerControl.Designer.cs">
+      <DependentUpon>AddServerControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\StraightLine.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\FollowCursor.cs" />
     <Compile Include="Controller\UDP.cs" />
     <Compile Include="Controller\WebSocket.cs" />
+    <Compile Include="GameMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameMenu.Designer.cs">
+      <DependentUpon>GameMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Bullet.cs" />
     <Compile Include="Model\Enemy.cs" />
     <Compile Include="Model\Game.cs" />
@@ -63,19 +85,41 @@
     <Compile Include="Model\GameObject.cs" />
     <Compile Include="Model\GameState.cs" />
     <Compile Include="Model\Player.cs" />
+    <Compile Include="OptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionControl.Designer.cs">
+      <DependentUpon>OptionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\GameLogic.cs" />
-    <Compile Include="View\Renderer.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\Renderer.cs" />
+    <EmbeddedResource Include="AddServerControl.resx">
+      <DependentUpon>AddServerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameArea.resx">
+      <DependentUpon>GameArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameMenu.resx">
+      <DependentUpon>GameMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionControl.resx">
+      <DependentUpon>OptionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +132,61 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulletTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OptionsOption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuitOption.png" />
+    <None Include="Resources\QuitHighlight.png" />
+    <None Include="Resources\sound off.png" />
+    <None Include="Resources\sound on.png" />
+    <None Include="Resources\soundText.png" />
+    <None Include="Resources\optionTitle.png" />
+    <None Include="Resources\border.png" />
+    <None Include="Resources\border1.png" />
+    <None Include="Resources\buttonSound.wav" />
+    <None Include="Resources\backgroundMusic.mp3" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\CancelHighlight.png" />
+    <None Include="Resources\menuImage1.jpg" />
+    <None Include="Resources\JoinServerHighlight.png" />
+    <None Include="Resources\JoinServer.png" />
+    <None Include="Resources\backgroundSound.wav" />
+    <None Include="Resources\addServerTitle.png" />
+    <None Include="Resources\addServerTitle1.png" />
+    <Content Include="Resources\OptionsHighlight.png" />
+    <None Include="Resources\DirectConnect.png" />
+    <None Include="Resources\AddServer.png" />
+    <None Include="Resources\AddOption.bmp" />
+    <Content Include="Resources\AddOption.png" />
+    <Content Include="Resources\AddServerHighlight.png" />
+    <Content Include="Resources\JoinOption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
