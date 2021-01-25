@@ -25,3 +25,13 @@ C:\Users\kimer\Source\Repos\BulletHell\BulletHell\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\kimer\Source\Repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.ResolveComReference.cache
 C:\Users\kimer\Source\Repos\BulletHell\BulletHell\obj\Debug\BulletHell.MainControl.resources
 C:\Users\kimer\Source\Repos\BulletHell\BulletHell\obj\Debug\BulletHell.OptionControl.resources
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\Interop.WMPLib.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\Interop.WMPLib.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.csproj.ResolveComReference.cache
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.AddServerControl.resources
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.GameArea.resources
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.GameMenu.resources
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.MainControl.resources
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\obj\Debug\BulletHell.OptionControl.resources
