@@ -36,6 +36,8 @@ namespace BulletHell {
 
             this.menu = menu;
 
+            BackColor = Color.Black;
+
             Height = GameAreaHeight;
             Width = GameAreaWidth;
             StartPosition = FormStartPosition.CenterScreen;

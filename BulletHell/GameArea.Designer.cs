@@ -37,6 +37,7 @@ namespace BulletHell {
             this.LabelSurvived.Location = new System.Drawing.Point(550, 20);
             this.LabelSurvived.Name = "LabelSurvived";
             this.LabelSurvived.TabIndex = 1;
+            this.LabelSurvived.ForeColor = Color.White;
             // 
             // GameArea
             // 

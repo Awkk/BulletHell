@@ -14,7 +14,7 @@ namespace BulletHell.Model {
         private readonly Game game;
         public Bullet(Game game) {
             Size = new Size(DefaultWidth, DefaultHeight);
-            BackColor = Color.Black;
+            BackColor = Color.Firebrick;
             this.game = game;
         }
 
