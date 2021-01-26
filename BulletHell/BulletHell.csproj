@@ -61,6 +61,12 @@
     <Compile Include="Controller\FollowCursor.cs" />
     <Compile Include="Controller\UdpSender.cs" />
     <Compile Include="Controller\WebSocket.cs" />
+    <Compile Include="DeathScreenControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeathScreenControl.Designer.cs">
+      <DependentUpon>DeathScreenControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +112,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="View\Renderer.cs" />
+    <Compile Include="WinScreenControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinScreenControl.Designer.cs">
+      <DependentUpon>WinScreenControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddServerControl.resx">
       <DependentUpon>AddServerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeathScreenControl.resx">
+      <DependentUpon>DeathScreenControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameArea.resx">
       <DependentUpon>GameArea.cs</DependentUpon>
@@ -128,6 +143,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinScreenControl.resx">
+      <DependentUpon>WinScreenControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,6 +170,8 @@
     <None Include="Resources\OptionsOption.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\youWinText.png" />
+    <None Include="Resources\quitText.png" />
     <None Include="Resources\ServersList.png" />
     <None Include="Resources\ServerName1.png" />
     <None Include="Resources\ServerAddress1.png" />
@@ -179,6 +199,8 @@
     <None Include="Resources\JoinServerTitle.png" />
     <None Include="Resources\CancelHighlight2.png" />
     <None Include="Resources\DoneHighlight.png" />
+    <None Include="Resources\gameOverText.png" />
+    <None Include="Resources\mainMenuText.png" />
     <Content Include="Resources\OptionsHighlight.png" />
     <None Include="Resources\DirectConnect.png" />
     <None Include="Resources\AddServer.png" />

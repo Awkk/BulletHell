@@ -25,7 +25,7 @@ namespace BulletHell {
         public static GameState State { get; set; }
 
         public const int GameAreaWidth = 1025;
-        public const int GameAreaHeight = 720;
+        public const int GameAreaHeight = 735;
         
 
         public GameArea() {
