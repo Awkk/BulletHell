@@ -145,23 +145,15 @@ namespace BulletHell.Model {
         }
 
         public void GameOver() {
-            timerStop();
-            showDeathControlVisible();
             GameArea.GameTime.Enabled = false;
             GameArea.StopWatch.Stop();
+            ShowDeathControlVisible();
             GameArea.Server.SendGameOver();
-           
         }
 
-        private void showDeathControlVisible()
+        public void ShowDeathControlVisible()
         {
             GameArea.setDeathControlVisible(true);
-        }
-
-        private void timerStop()
-        {
-            GameArea.StopwatchUsingMethod1();
-
         }
     }
 }

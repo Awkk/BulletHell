@@ -23,14 +23,14 @@ namespace BulletHell {
 
         public GameServer Server { get; private set; }
 
+        public Stopwatch StopWatch { get; set; }
+
         public const int GameAreaWidth = 700;
         public const int GameAreaHeight = 700;
 
         private readonly Game game;
 
         private Form menu;
-        Stopwatch sw;
-        Timer timer;
         public GameArea(Form menu, string txtAddr1, int txtPort1) {
 
             InitializeComponent();
@@ -51,16 +51,9 @@ namespace BulletHell {
                 Interval = 10
             };
 
-            sw = new Stopwatch();
-
-            StopwatchUsingMethod();
-
-            Renderer renderer = new Renderer();
-            GameTime.Tick += new EventHandler(renderer.Update);
+            GameTime.Tick += new EventHandler(UpdateTime);
 
             game = new Game(this);
-
-            // Backgroud thread listening for packets
 
             string txtAddress = txtAddr1;
             int txtPort = txtPort1;
@@ -93,7 +86,6 @@ namespace BulletHell {
         }
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
-            sw.Stop();
             game.GameOver();
             UDPListener.Done = true;
             menu.Show();
@@ -106,40 +98,16 @@ namespace BulletHell {
         }
 
         public void UpdateTime(object sender, EventArgs e) {
-            LabelSurvived.Text = "Survived: " + StopWatch.Elapsed.TotalSeconds + " s";
+            lblTimer.Text = "Survived: " + StopWatch.Elapsed.TotalSeconds + " s";
         }
 
-        public void setDeathControlVisible(Boolean flag)
+        public void setDeathControlVisible(bool flag)
         {
             this.deathScreenControl1.Visible = flag;
-            TimeSpan timeTaken = sw.Elapsed;
+            TimeSpan timeTaken = StopWatch.Elapsed;
             string foo = "Time taken before death: " + timeTaken.ToString(@"m\:ss\.fff") + " seconds";
             deathScreenControl1.showResults(foo);
         }
-        
-        public void StopwatchUsingMethod()
-        {
-            timer = new Timer();
-            timer.Interval = (1000);
-            timer.Tick += new EventHandler(timer_Tick);
-            sw = new Stopwatch();
-            timer.Start();
-            sw.Start();
-
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            lblTimer.Text = sw.Elapsed.Seconds.ToString() + " seconds";
-            Application.DoEvents();
-        }
-
-        //Messagebox is spammed due to GameOver state being spammed
-        public void StopwatchUsingMethod1()
-        {
-            timer.Stop();
-            sw.Stop();
-                              }
     }
    }
 

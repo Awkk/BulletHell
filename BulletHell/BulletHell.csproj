@@ -113,7 +113,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\Renderer.cs" />
     <Compile Include="WaterMarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>

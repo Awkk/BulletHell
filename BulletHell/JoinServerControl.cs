@@ -68,6 +68,10 @@ namespace BulletHell
             game.Show();
         }
 
+        private void textAddr_TextChanged(object sender, EventArgs e) {
+
+        }
+
         //Just was testing with interface for more decoupled design 
         //private string TextAddr()
         //{
