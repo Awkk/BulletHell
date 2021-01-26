@@ -55,7 +55,7 @@ namespace BulletHell
 
         private void done_option_Click(object sender, EventArgs e)
         {
-            GameArea game = new GameArea();
+            GameArea game = new GameArea(ParentForm);
             game.Show();
         }
     }

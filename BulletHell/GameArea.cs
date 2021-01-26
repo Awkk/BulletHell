@@ -29,10 +29,13 @@ namespace BulletHell {
         public const int GameAreaHeight = 700;
 
         private readonly Game game;
+        private Form menu;
 
-        public GameArea() {
+        public GameArea(Form menu) {
             InitializeComponent();
             FormClosing += new FormClosingEventHandler(GameArea_FormClosing);
+
+            this.menu = menu;
 
             Height = GameAreaHeight;
             Width = GameAreaWidth;
@@ -76,6 +79,7 @@ namespace BulletHell {
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
             game.GameOver();
+            menu.Show();
         }
 
         private void GameArea_KeyDown(object sender, KeyEventArgs e) {

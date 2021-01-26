@@ -7,3 +7,12 @@ C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\UDP.csproj.CoreC
 C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\UDP.csproj.CopyComplete
 C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\Multicast.dll
 C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\Multicast.pdb
+C:\Users\Andrew\source\repos\BulletHell\Multicast\bin\Debug\Multicast.dll
+C:\Users\Andrew\source\repos\BulletHell\Multicast\bin\Debug\Multicast.pdb
+C:\Users\Andrew\source\repos\BulletHell\Multicast\bin\Debug\Network.dll
+C:\Users\Andrew\source\repos\BulletHell\Multicast\bin\Debug\Network.pdb
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\UDP.csprojAssemblyReference.cache
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\UDP.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\UDP.csproj.CopyComplete
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\Multicast.dll
+C:\Users\Andrew\source\repos\BulletHell\Multicast\obj\Debug\Multicast.pdb
