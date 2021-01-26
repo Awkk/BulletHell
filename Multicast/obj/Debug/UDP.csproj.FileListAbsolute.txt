@@ -1,0 +1,9 @@
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\bin\Debug\Multicast.dll
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\bin\Debug\Multicast.pdb
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\bin\Debug\Network.dll
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\bin\Debug\Network.pdb
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\UDP.csprojAssemblyReference.cache
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\UDP.csproj.CoreCompileInputs.cache
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\UDP.csproj.CopyComplete
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\Multicast.dll
+C:\Users\kimer\source\repos\BulletHellFinal\Multicast\obj\Debug\Multicast.pdb
