@@ -11,7 +11,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BulletHell.Model;
-using BulletHell.View;
 using Network;
 using UDP;
 using Timer = System.Windows.Forms.Timer;
@@ -30,6 +29,7 @@ namespace BulletHell {
 
         private readonly Game game;
         private Form menu;
+        public Stopwatch StopWatch { get; set; }
 
         public GameArea(Form menu) {
             InitializeComponent();
@@ -41,12 +41,14 @@ namespace BulletHell {
             Width = GameAreaWidth;
             StartPosition = FormStartPosition.CenterScreen;
 
+            StopWatch = new Stopwatch();
+
             GameTime = new Timer {
                 Interval = 10
             };
 
-            Renderer renderer = new Renderer();
-            GameTime.Tick += new EventHandler(renderer.Update);
+
+            GameTime.Tick += new EventHandler(UpdateTime);
 
             game = new Game(this);
 
@@ -86,6 +88,10 @@ namespace BulletHell {
             if (e.KeyCode == Keys.Space) {
                 Server.SendGameStart();
             }
+        }
+
+        public void UpdateTime(object sender, EventArgs e) {
+            LabelSurvived.Text = "Survived: " + StopWatch.Elapsed.TotalSeconds + " s";
         }
     }
 

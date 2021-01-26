@@ -113,7 +113,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\Renderer.cs" />
     <Compile Include="WinScreenControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +239,9 @@
       <Project>{2e79b549-8af7-43a9-b6d7-c8f5d38a0675}</Project>
       <Name>Network</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
