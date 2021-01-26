@@ -10,25 +10,20 @@ using Network;
 
 namespace UDP {
     public class UDPListener : IListener {
-        private readonly Socket mcastSocket;
-
+        private UdpClient udpclient;
         public UDPListener(string ipAddress, int port) {
             try {
-                mcastSocket = new Socket(AddressFamily.InterNetwork,
-                                         SocketType.Dgram,
-                                         ProtocolType.Udp);
 
                 IPAddress mcastAddress = IPAddress.Parse(ipAddress);
                 IPAddress localIP = IPAddress.Any;
                 EndPoint localEP = new IPEndPoint(localIP, port);
 
-                MulticastOption mcastOption = new MulticastOption(mcastAddress, localIP);
-
-                mcastSocket.SetSocketOption(SocketOptionLevel.IP,
-                                            SocketOptionName.AddMembership,
-                                            mcastOption);
-
-                mcastSocket.Bind(localEP);
+                udpclient = new UdpClient();
+                udpclient.ExclusiveAddressUse = false;
+                udpclient.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                udpclient.ExclusiveAddressUse = false;
+                udpclient.Client.Bind(localEP);
+                udpclient.JoinMulticastGroup(mcastAddress, localIP);
             } catch (Exception e) {
                 Debug.WriteLine(e.ToString());
             }
@@ -36,18 +31,18 @@ namespace UDP {
 
         public void ReceiveMessage() {
             bool done = false;
-            byte[] bytes = new byte[100];
-            EndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
+            IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
 
             try {
                 while (!done) {
-                    mcastSocket.ReceiveFrom(bytes, ref remoteEP);
+                    byte[] bytes = udpclient.Receive(ref remoteEP);
+                    //Debug.WriteLine("\n" + Encoding.ASCII.GetString(bytes, 0, bytes.Length) + "\n");
                     OnMessageReceived(Encoding.ASCII.GetString(bytes, 0, bytes.Length));
                 }
             } catch (Exception e) {
                 Debug.WriteLine(e.ToString());
             } finally {
-                mcastSocket.Close();
+                udpclient.Close();
             }
         }
 

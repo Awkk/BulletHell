@@ -17,11 +17,14 @@ namespace BulletHell.Model {
         private string id;
         private int i = 0;
 
+        private Random rnd;
+
         public GameServer(Game game, ISender sender) {
             this.game = game;
             Sender = sender;
             id = Guid.NewGuid().ToString();
             PlayerLocation = new Dictionary<string, int[]>();
+            rnd = new Random();
         }
 
         public void ProcessMessage(string message) {
@@ -35,9 +38,8 @@ namespace BulletHell.Model {
                         Debug.WriteLine("\n" + i++ + ": " + message + "\n");
                         string[] xy = location.Split(',');
                         if (!PlayerLocation.ContainsKey(senderId)) {
-
                             Player player = new Player();
-                            player.BackColor = Color.Blue;
+                            player.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                             PlayerLocation[senderId] = new int[] { int.Parse(xy[0]), int.Parse(xy[1]) };
                             game.AddGameObject(player, new Remote(senderId));
                         } else {

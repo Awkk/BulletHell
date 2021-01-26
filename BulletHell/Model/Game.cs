@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BulletHell.Controller;
 using BulletHell.View;
+using System.Diagnostics;
 
 namespace BulletHell.Model {
     public class Game {
@@ -32,10 +33,11 @@ namespace BulletHell.Model {
             obj.Controller = controller;
             obj.Handler = new EventHandler(obj.UpdateObject);
             gameArea.GameTime.Tick += obj.Handler;
-            if (obj.GameArea.InvokeRequired) {
-                return;
+            if (gameArea.InvokeRequired) {
+                gameArea.Invoke(new Action(() => gameArea.Controls.Add(obj.Body)));
+            } else {
+                gameArea.Controls.Add(obj.Body);
             }
-            gameArea.Controls.Add(obj.Body);
         }
 
         public void GameOver() {
