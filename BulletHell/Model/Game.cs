@@ -12,29 +12,35 @@ using BulletHell.View;
 namespace BulletHell.Model {
     public class Game {
         public GameObject Player { get; set; }
+        private GameArea gameArea;
 
-        public Game() {
-            GameArea.GameTime.Enabled = true;
+        public Game(GameArea gameArea) {
+            this.gameArea = gameArea;
+            gameArea.GameTime.Enabled = true;
 
             Player = new Player();
             AddGameObject(Player, new FollowCursor());
         }
         public void Start() {
-            GameArea.State = GameState.InPlay;
+            gameArea.State = GameState.InPlay;
 
             AddGameObject(new Bullet(this), new StraightLine(2, 2));
         }
 
         public void AddGameObject(GameObject obj, IController controller) {
+            obj.GameArea = gameArea;
             obj.Controller = controller;
             obj.Handler = new EventHandler(obj.UpdateObject);
-            GameArea.GameTime.Tick += obj.Handler;
-            GameArea.MainForm.Controls.Add(obj.Body);
+            gameArea.GameTime.Tick += obj.Handler;
+            if (obj.GameArea.InvokeRequired) {
+                return;
+            }
+            gameArea.Controls.Add(obj.Body);
         }
 
         public void GameOver() {
-            GameArea.GameTime.Enabled = false;
-            GameArea.State = GameState.GameOver;
+            gameArea.GameTime.Enabled = false;
+            gameArea.State = GameState.GameOver;
         }
     }
 }

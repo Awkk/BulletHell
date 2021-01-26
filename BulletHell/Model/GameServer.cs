@@ -15,7 +15,7 @@ namespace BulletHell.Model {
         private Game game;
         public Dictionary<string, int[]> PlayerLocation { get; set; }
         private string id;
-
+        private int i = 0;
 
         public GameServer(Game game, ISender sender) {
             this.game = game;
@@ -32,22 +32,23 @@ namespace BulletHell.Model {
             switch (request) {
                 case "P":
                     if (senderId != id) {
+                        Debug.WriteLine("\n" + i++ + ": " + message + "\n");
+                        string[] xy = location.Split(',');
                         if (!PlayerLocation.ContainsKey(senderId)) {
+
                             Player player = new Player();
                             player.BackColor = Color.Blue;
-                            string[] xy = location.Split(',');
-                            PlayerLocation.Add(senderId, new int[] { int.Parse(xy[0]), int.Parse(xy[1]) });
+                            PlayerLocation[senderId] = new int[] { int.Parse(xy[0]), int.Parse(xy[1]) };
                             game.AddGameObject(player, new Remote(senderId));
                         } else {
-                            string[] xy = location.Split(',');
-                            PlayerLocation.Add(senderId, new int[] { int.Parse(xy[0]), int.Parse(xy[1]) });
+                            PlayerLocation[senderId] = new int[] { int.Parse(xy[0]), int.Parse(xy[1]) };
                         }
                     }
                     break;
             }
         }
         public void SendPlayerLocation(int x, int y) {
-           // Debug.WriteLine("Send: " + x + "," + y);
+            // Debug.WriteLine("Send: " + x + "," + y);
             Sender.Send($"P:{id}:{x},{y}");
         }
 

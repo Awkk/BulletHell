@@ -20,11 +20,10 @@ namespace BulletHell {
 
 
     public partial class GameArea : Form {
-        public static GameArea MainForm { get; private set; }
-        public static Timer GameTime { get; private set; }
-        public static GameState State { get; set; }
+        public Timer GameTime { get; private set; }
+        public GameState State { get; set; }
 
-        public static GameServer Server { get; private set; }
+        public GameServer Server { get; private set; }
 
         public const int GameAreaWidth = 1025;
         public const int GameAreaHeight = 720;
@@ -35,7 +34,6 @@ namespace BulletHell {
             InitializeComponent();
             FormClosing += new FormClosingEventHandler(GameArea_FormClosing);
 
-            MainForm = this;
             Height = GameAreaHeight;
             Width = GameAreaWidth;
             StartPosition = FormStartPosition.CenterScreen;
@@ -47,7 +45,7 @@ namespace BulletHell {
             Renderer renderer = new Renderer();
             GameTime.Tick += new EventHandler(renderer.Update);
 
-            game = new Game();
+            game = new Game(this);
 
             // Backgroud thread listening for packets
             IListener listener = new UDPListener("224.168.100.2", 11000);
@@ -62,7 +60,7 @@ namespace BulletHell {
             Server = new GameServer(game, sender);
         }
 
-        public static void MessageRecieved(object sender, string message) {
+        public void MessageRecieved(object sender, string message) {
             Server.ProcessMessage(message);
         }
 

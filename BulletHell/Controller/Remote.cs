@@ -15,8 +15,7 @@ namespace BulletHell.Controller {
             this.id = id;
         }
         public void UpdateLocation(GameObject obj) {
-            int[] location = GameArea.Server.PlayerLocation[id];
-            Debug.WriteLine("update:" + location[0] + "," + location[1]);
+            int[] location = obj.GameArea.Server.PlayerLocation[id];
             obj.Location = new Point(location[0], location[1]); ;
         }
     }

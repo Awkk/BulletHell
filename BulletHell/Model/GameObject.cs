@@ -9,6 +9,7 @@ using BulletHell.Controller;
 
 namespace BulletHell.Model {
     public class GameObject {
+        public GameArea GameArea { get; set; }
         public PictureBox Body { get; private set; }
         public IController Controller { get; set; }
 

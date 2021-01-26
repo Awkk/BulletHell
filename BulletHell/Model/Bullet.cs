@@ -24,7 +24,7 @@ namespace BulletHell.Model {
                 game.GameOver();
             }
             if (GameLogic.OutOfBorder(this)) {
-                GameArea.MainForm.Controls.Remove(Body);
+                GameArea.Controls.Remove(Body);
                 GameArea.GameTime.Tick -= Handler;
             }
         }

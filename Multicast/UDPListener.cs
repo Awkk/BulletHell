@@ -44,10 +44,10 @@ namespace UDP {
                     mcastSocket.ReceiveFrom(bytes, ref remoteEP);
                     OnMessageReceived(Encoding.ASCII.GetString(bytes, 0, bytes.Length));
                 }
-
-                mcastSocket.Close();
             } catch (Exception e) {
                 Debug.WriteLine(e.ToString());
+            } finally {
+                mcastSocket.Close();
             }
         }
 
