@@ -1,6 +1,0 @@
-C:\Users\Andrew\source\repos\BulletHell\Network\bin\Debug\Network.dll
-C:\Users\Andrew\source\repos\BulletHell\Network\bin\Debug\Network.pdb
-C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.csprojAssemblyReference.cache
-C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.csproj.CoreCompileInputs.cache
-C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.dll
-C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.pdb

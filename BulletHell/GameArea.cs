@@ -20,15 +20,16 @@ namespace BulletHell {
 
 
     public partial class GameArea : Form {
-        public static GameArea MainForm { get; set; }
-        public static Timer GameTime { get; set; }
+        public static GameArea MainForm { get; private set; }
+        public static Timer GameTime { get; private set; }
         public static GameState State { get; set; }
+
+        public static GameServer Server { get; private set; }
 
         public const int GameAreaWidth = 1025;
         public const int GameAreaHeight = 720;
 
-        private Game game;
-
+        private readonly Game game;
 
         public GameArea() {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace BulletHell {
             StartPosition = FormStartPosition.CenterScreen;
 
             GameTime = new Timer {
-                Interval = 10
+                Interval = 50
             };
 
             Renderer renderer = new Renderer();
@@ -48,18 +49,21 @@ namespace BulletHell {
 
             game = new Game();
 
+            // Backgroud thread listening for packets
             IListener listener = new UDPListener("224.168.100.2", 11000);
             listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
 
             Thread recieveMessageThread = new Thread(new ThreadStart(listener.ReceiveMessage)) {
                 IsBackground = true
             };
-
             recieveMessageThread.Start();
+
+            ISender sender = new UDPSender("224.168.100.2", 11000);
+            Server = new GameServer(game, sender);
         }
 
         public static void MessageRecieved(object sender, string message) {
-            Debug.WriteLine(message);
+            Server.ProcessMessage(message);
         }
 
 
@@ -74,10 +78,11 @@ namespace BulletHell {
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
             game.GameOver();
+            Server.Sender.Close();
         }
 
         private void GameArea_KeyDown(object sender, KeyEventArgs e) {
-            if(e.KeyCode == Keys.Space) {
+            if (e.KeyCode == Keys.Space) {
                 game.Start();
             }
         }

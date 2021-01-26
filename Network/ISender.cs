@@ -7,5 +7,7 @@ using System.Threading.Tasks;
 namespace Network {
     public interface ISender {
         void Send(string message);
+
+        void Close();
     }
 }

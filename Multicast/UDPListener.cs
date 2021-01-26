@@ -22,13 +22,13 @@ namespace UDP {
                 IPAddress localIP = IPAddress.Any;
                 EndPoint localEP = new IPEndPoint(localIP, port);
 
-                mcastSocket.Bind(localEP);
-
                 MulticastOption mcastOption = new MulticastOption(mcastAddress, localIP);
 
                 mcastSocket.SetSocketOption(SocketOptionLevel.IP,
                                             SocketOptionName.AddMembership,
                                             mcastOption);
+
+                mcastSocket.Bind(localEP);
             } catch (Exception e) {
                 Debug.WriteLine(e.ToString());
             }

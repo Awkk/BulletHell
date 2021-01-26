@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BulletHell.Model {
     public enum GameState {
+        WaitingPlayer,
         InPlay,
         GameOver
     }

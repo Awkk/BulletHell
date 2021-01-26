@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using BulletHell.Controller;
 
 namespace BulletHell.Model {
-    class GameObject {
+    public class GameObject {
         public PictureBox Body { get; private set; }
         public IController Controller { get; set; }
 

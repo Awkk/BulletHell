@@ -14,6 +14,7 @@ namespace BulletHell.Controller {
             int newX = (cursor.X - obj.Width / 2 < 0) || (cursor.X + obj.Width > GameArea.MainForm.Width) ? obj.Location.X : cursor.X - obj.Width / 2;
             int newY = (cursor.Y - obj.Height / 2 < 0) || (cursor.Y + obj.Height*1.75 > GameArea.MainForm.Height) ? obj.Location.Y : cursor.Y - obj.Height / 2;
             obj.Location = new Point(newX, newY);
+            GameArea.Server.SendPlayerLocation(newX, newY);
         }
     }
 }
