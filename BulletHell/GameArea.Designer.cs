@@ -40,7 +40,7 @@ namespace BulletHell {
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Miriam Mono CLM", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblTimer.Location = new System.Drawing.Point(679, 19);
+            this.lblTimer.Location = new System.Drawing.Point(850, 25);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(109, 21);
             this.lblTimer.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace BulletHell {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1009, 696);
             this.Controls.Add(this.lblTimer);
             this.Name = "GameArea";
             this.Text = "8";
