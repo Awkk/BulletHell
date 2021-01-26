@@ -97,7 +97,6 @@
     <Compile Include="Model\GameClient.cs" />
     <Compile Include="Model\GameObject.cs" />
     <Compile Include="Model\GameServer.cs" />
-    <Compile Include="Model\GameState.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="OptionControl.cs">
       <SubType>UserControl</SubType>

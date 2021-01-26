@@ -11,6 +11,7 @@ using Network;
 namespace UDP {
     public class UDPListener : IListener {
         private UdpClient udpclient;
+        public static bool Done { get; set; }
         public UDPListener(string ipAddress, int port) {
             try {
 
@@ -30,11 +31,11 @@ namespace UDP {
         }
 
         public void ReceiveMessage() {
-            bool done = false;
+            Done = false;
             IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
 
             try {
-                while (!done) {
+                while (!Done) {
                     byte[] bytes = udpclient.Receive(ref remoteEP);
                     //Debug.WriteLine("\n" + Encoding.ASCII.GetString(bytes, 0, bytes.Length) + "\n");
                     OnMessageReceived(Encoding.ASCII.GetString(bytes, 0, bytes.Length));

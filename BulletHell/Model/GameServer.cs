@@ -51,7 +51,8 @@ namespace BulletHell.Model {
                     game.Start();
                     break;
                 case "GameOver":
-                    game.GameOver();
+                    game.GameArea.GameTime.Enabled = false;
+                    game.GameArea.StopWatch.Stop();
                     break;
             }
         }

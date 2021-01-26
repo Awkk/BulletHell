@@ -20,7 +20,6 @@ namespace BulletHell {
 
     public partial class GameArea : Form {
         public Timer GameTime { get; private set; }
-        public GameState State { get; set; }
 
         public GameServer Server { get; private set; }
 
@@ -81,6 +80,7 @@ namespace BulletHell {
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
             game.GameOver();
+            UDPListener.Done = true;
             menu.Show();
         }
 

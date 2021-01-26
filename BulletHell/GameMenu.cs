@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BulletHell
-{
+namespace BulletHell {
 
-    public partial class GameMenu : Form
-    {
+    public partial class GameMenu : Form {
 
         public static GameMenu MainForm { get; private set; }
 
@@ -25,41 +24,35 @@ namespace BulletHell
 
         static GameMenu _obj;
 
-        public static GameMenu Instance
-        {
-            get
-            {
-                if(_obj == null)
-                {
+        public static GameMenu Instance {
+            get {
+                if (_obj == null) {
                     _obj = new GameMenu();
                 }
                 return _obj;
             }
         }
 
-          public Panel PnlContainer
-        {
+        public Panel PnlContainer {
             get { return panelContainer; }
             set { panelContainer = value; }
         }
 
 
-        public GameMenu()
-        {
+        public GameMenu() {
             MainForm = this;
             Height = GameAreaHeight;
             Width = GameAreaWidth;
             StartPosition = FormStartPosition.CenterScreen;
-            
+
             InitializeComponent();
-            wplayer.URL = (@"C:\Users\kimer\Source\Repos\BulletHell\BulletHell\Resources\backgroundSound.wav");
+            wplayer.URL = (Path.Combine(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Application.ExecutablePath))), "Resources", "backgroundSound.wav"));
             wplayer.settings.volume = 15;
             wplayer.controls.play();
             axWindowsMediaPlayer1.Hide();
         }
 
-        private void GameMenu_Load(object sender, EventArgs e)
-        {
+        private void GameMenu_Load(object sender, EventArgs e) {
             //Display MainControl menu when form loads
             _obj = this;
 
@@ -68,8 +61,7 @@ namespace BulletHell
             panelContainer.Controls.Add(mc);
         }
 
-        private void cancel_option_Click(object sender, EventArgs e)
-        {
+        private void cancel_option_Click(object sender, EventArgs e) {
             panelContainer.Controls["MainControl"].BringToFront();
         }
 

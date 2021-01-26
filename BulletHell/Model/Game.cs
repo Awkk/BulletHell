@@ -22,7 +22,6 @@ namespace BulletHell.Model {
             AddGameObject(Player, new FollowCursor());
         }
         public void Start() {
-            GameArea.State = GameState.InPlay;
             GameArea.StopWatch.Start();
 
             int top = 10, left = 10, right = GameArea.Width - 50, bottom = GameArea.Height - 50;
@@ -147,8 +146,8 @@ namespace BulletHell.Model {
         public void GameOver() {
             GameArea.GameTime.Enabled = false;
             GameArea.StopWatch.Stop();
-            GameArea.State = GameState.GameOver;
             GameArea.Server.SendGameOver();
+           
         }
     }
 }
