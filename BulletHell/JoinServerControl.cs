@@ -14,7 +14,11 @@ namespace BulletHell
 {
     public partial class JoinServerControl : UserControl
     {
+
+
+
         private SoundPlayer buttonSound;
+                
         public JoinServerControl()
         {
             InitializeComponent();
@@ -55,8 +59,53 @@ namespace BulletHell
 
         private void done_option_Click(object sender, EventArgs e)
         {
-            GameArea game = new GameArea(ParentForm);
+            if (string.IsNullOrWhiteSpace(textAddr.Text) || string.IsNullOrWhiteSpace(textPort.Text)) {
+                MessageBox.Show("Please enter an IP Address and/or Port Number");
+            }
+
+            ParentForm.Hide();
+            GameArea game = new GameArea(ParentForm, textAddr.Text, Int32.Parse(textPort.Text));
             game.Show();
         }
+
+        //Just was testing with interface for more decoupled design 
+        //private string TextAddr()
+        //{
+        //    return textAddr.Text;
+
+        //}
+        //public string TextPort()
+        //{
+        //    return textPort.Text;
+        //}
+        //public string TextBoxAddr
+        //{
+        //    get { return textBox1.Text; }
+        //}
+        //public string TextBoxPort
+        //{
+        //    get { return txtPort.Text; }
+        //}
+        //private void TextBoxAddr_TextChanged(object sender, EventArgs e)
+        //{
+        //    var textBoxContent = this.textBox1.Text;
+        //    var parent = this.Parent as GameArea;
+        //    parent.TextBoxAddr = TextBoxAddr;
+        //}
+
+        //private void TextBoxPort_TextChanged(object sender, EventArgs e)
+        //{
+        //    var textBoxContent = this.txtPort.Text;
+        //    var parent = this.Parent as GameArea;
+        //    parent.TextBoxAddr = TextBoxAddr;
+        //}
+
+
+        //private void textBox1_TextChanged(object sender, EventArgs e)
+        //{
+        //    var textBoxContent = this.textAddr.Text;
+        //    var parent = this.Parent as GameArea;
+        //    parent.ID2 = ID2;
+        //}
     }
 }

@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="youWinText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youWinText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CancelHighlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CancelHighlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,6 +132,12 @@
   </data>
   <data name="AddServer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddServer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mainMenuText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenuText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ServerPortText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ServerPortText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backgroundSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -145,8 +154,8 @@
   <data name="border1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\border1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addServerTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addServerTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sound_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -162,9 +171,6 @@
   </data>
   <data name="soundText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soundText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DoneHighlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DoneHighlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bulletTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bulletTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +211,14 @@
   <data name="gameOverText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gameOverText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mainMenuText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainMenuText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DoneHighlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DoneHighlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JoinServer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JoinServer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sound_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sound off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="addServerTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addServerTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quitText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quitText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +226,13 @@
   <data name="optionTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\optionTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="youWinText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\youWinText1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picturetopeople.org-8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picturetopeople.org-8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MmHighlightText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MmHighlightText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quitHighlightText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quitHighlightText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

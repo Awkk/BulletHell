@@ -73,6 +73,7 @@
     <Compile Include="GameMenu.Designer.cs">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceJoin.cs" />
     <Compile Include="JoinServerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +115,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="View\Renderer.cs" />
+    <Compile Include="WaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WinScreenControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +173,9 @@
     <None Include="Resources\OptionsOption.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\quitHighlightText.png" />
+    <None Include="Resources\picturetopeople.org-8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e.png" />
+    <None Include="Resources\ServerPortText.png" />
     <None Include="Resources\youWinText1.png" />
     <None Include="Resources\quitText1.png" />
     <None Include="Resources\youWinText.png" />
@@ -204,6 +211,7 @@
     <None Include="Resources\mainMenuText.png" />
     <None Include="Resources\gameOverText1.png" />
     <None Include="Resources\mainMenuText1.png" />
+    <None Include="Resources\MmHighlightText.png" />
     <Content Include="Resources\OptionsHighlight.png" />
     <None Include="Resources\DirectConnect.png" />
     <None Include="Resources\AddServer.png" />

@@ -4,3 +4,9 @@ C:\Users\kimer\source\repos\BulletHellFinal\Network\obj\Debug\Network.csprojAsse
 C:\Users\kimer\source\repos\BulletHellFinal\Network\obj\Debug\Network.csproj.CoreCompileInputs.cache
 C:\Users\kimer\source\repos\BulletHellFinal\Network\obj\Debug\Network.dll
 C:\Users\kimer\source\repos\BulletHellFinal\Network\obj\Debug\Network.pdb
+C:\Users\kimer\source\repos\BulletHellMain\Network\bin\Debug\Network.dll
+C:\Users\kimer\source\repos\BulletHellMain\Network\bin\Debug\Network.pdb
+C:\Users\kimer\source\repos\BulletHellMain\Network\obj\Debug\Network.csprojAssemblyReference.cache
+C:\Users\kimer\source\repos\BulletHellMain\Network\obj\Debug\Network.csproj.CoreCompileInputs.cache
+C:\Users\kimer\source\repos\BulletHellMain\Network\obj\Debug\Network.dll
+C:\Users\kimer\source\repos\BulletHellMain\Network\obj\Debug\Network.pdb

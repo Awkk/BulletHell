@@ -29,6 +29,7 @@ namespace BulletHell {
             this.components = new System.ComponentModel.Container();
             this.tmrGame = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
+            this.deathScreenControl1 = new BulletHell.DeathScreenControl();
             this.SuspendLayout();
             // 
             // tmrGame
@@ -39,19 +40,30 @@ namespace BulletHell {
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
+            this.lblTimer.BackColor = System.Drawing.Color.Transparent;
             this.lblTimer.Font = new System.Drawing.Font("Miriam Mono CLM", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblTimer.Location = new System.Drawing.Point(679, 19);
+            this.lblTimer.Location = new System.Drawing.Point(531, 26);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(109, 21);
             this.lblTimer.TabIndex = 0;
             this.lblTimer.Text = "0 seconds";
             // 
+            // deathScreenControl1
+            // 
+            this.deathScreenControl1.BackColor = System.Drawing.Color.Transparent;
+            this.deathScreenControl1.Location = new System.Drawing.Point(-9, -29);
+            this.deathScreenControl1.Name = "deathScreenControl1";
+            this.deathScreenControl1.Size = new System.Drawing.Size(700, 700);
+            this.deathScreenControl1.TabIndex = 1;
+            this.deathScreenControl1.Visible = false;
+            // 
             // GameArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 661);
             this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.deathScreenControl1);
             this.Name = "GameArea";
             this.Text = "8";
             this.Load += new System.EventHandler(this.GameArea_Load);
@@ -70,6 +82,7 @@ namespace BulletHell {
 
         private System.Windows.Forms.Timer tmrGame;
         private System.Windows.Forms.Label lblTimer;
+        private DeathScreenControl deathScreenControl1;
     }
 }
 
