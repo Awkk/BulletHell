@@ -14,6 +14,7 @@ using BulletHell.Model;
 using BulletHell.View;
 using Network;
 using UDP;
+using WMPLib;
 using Timer = System.Windows.Forms.Timer;
 
 namespace BulletHell {
@@ -26,13 +27,19 @@ namespace BulletHell {
 
         public const int GameAreaWidth = 1025;
         public const int GameAreaHeight = 720;
-        
+
+        WindowsMediaPlayer music = new WindowsMediaPlayer();
+        private int ticks;
 
         public GameArea() {
+            InitializeComponent();
+            music.URL = "Bullet_Hell.mp3";
             MainForm = this;
             Height = GameAreaHeight;
             Width = GameAreaWidth;
             StartPosition = FormStartPosition.CenterScreen;
+            
+            
 
             GameTime = new Timer {
                 Interval = 10,
@@ -44,6 +51,9 @@ namespace BulletHell {
 
             Game game = new Game();
             game.Start();
+            
+
+            
 
             IListener listener = new UDPListener("224.168.100.2", 11000);
             listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
@@ -53,6 +63,7 @@ namespace BulletHell {
             };
 
             recieveMessageThread.Start();
+            
         }
 
         public static void MessageRecieved(object sender, string message) {
@@ -70,7 +81,13 @@ namespace BulletHell {
 
         private void GameArea_Load(object sender, EventArgs e)
         {
-
+            music.controls.play();
+        }
+        //not working
+        private void lblTimer_Click(object sender, EventArgs e)
+        {
+            ticks++;
+            this.Text = ticks.ToString();
         }
     }
 

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Diagnostics;
 
 namespace BulletHell.Model {
@@ -14,9 +15,10 @@ namespace BulletHell.Model {
         private readonly Game game;
         public Bullet(Game game) {
             Size = new Size(DefaultWidth, DefaultHeight);
-            BackColor = Color.Black;
+            BackColor = Color.LightYellow;
             this.game = game;
         }
+
 
         public override void UpdateObject(object sender, EventArgs e) {
             base.UpdateObject(sender, e);

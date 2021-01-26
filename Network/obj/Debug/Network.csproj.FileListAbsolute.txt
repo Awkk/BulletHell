@@ -4,3 +4,9 @@ C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.csprojAssembly
 C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.csproj.CoreCompileInputs.cache
 C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.dll
 C:\Users\Andrew\source\repos\BulletHell\Network\obj\Debug\Network.pdb
+C:\term4444\COMP4945distributesoftwarearch\Assignment222222\BulletHell\Network\bin\Debug\Network.dll
+C:\term4444\COMP4945distributesoftwarearch\Assignment222222\BulletHell\Network\bin\Debug\Network.pdb
+C:\term4444\COMP4945distributesoftwarearch\Assignment222222\BulletHell\Network\obj\Debug\Network.csprojAssemblyReference.cache
+C:\term4444\COMP4945distributesoftwarearch\Assignment222222\BulletHell\Network\obj\Debug\Network.csproj.CoreCompileInputs.cache
+C:\term4444\COMP4945distributesoftwarearch\Assignment222222\BulletHell\Network\obj\Debug\Network.dll
+C:\term4444\COMP4945distributesoftwarearch\Assignment222222\BulletHell\Network\obj\Debug\Network.pdb

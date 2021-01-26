@@ -10,7 +10,11 @@ using System.Threading.Tasks;
 namespace BulletHell.Model {
     class GameLogic {
         public static bool Collision(GameObject obj1, GameObject obj2) {
+         
             return obj1.Bounds.IntersectsWith(obj2.Bounds);
+
+
+
         }
         public static bool OutOfBorder(GameObject obj) {
             Point location = obj.Location;
