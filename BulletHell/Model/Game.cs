@@ -20,6 +20,7 @@ namespace BulletHell.Model {
 
             Player = new Player();
             AddGameObject(Player, new FollowCursor());
+
         }
         public void Start() {
             GameArea.StopWatch.Start();
@@ -144,10 +145,23 @@ namespace BulletHell.Model {
         }
 
         public void GameOver() {
+            timerStop();
+            showDeathControlVisible();
             GameArea.GameTime.Enabled = false;
             GameArea.StopWatch.Stop();
             GameArea.Server.SendGameOver();
            
+        }
+
+        private void showDeathControlVisible()
+        {
+            GameArea.setDeathControlVisible(true);
+        }
+
+        private void timerStop()
+        {
+            GameArea.StopwatchUsingMethod1();
+
         }
     }
 }

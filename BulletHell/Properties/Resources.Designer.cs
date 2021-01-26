@@ -271,6 +271,16 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MmHighlightText {
+            get {
+                object obj = ResourceManager.GetObject("MmHighlightText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OptionsHighlight {
             get {
                 object obj = ResourceManager.GetObject("OptionsHighlight", resourceCulture);
@@ -311,9 +321,29 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap picturetopeople_org_8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e {
+            get {
+                object obj = ResourceManager.GetObject("picturetopeople.org-8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap QuitHighlight {
             get {
                 object obj = ResourceManager.GetObject("QuitHighlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quitHighlightText {
+            get {
+                object obj = ResourceManager.GetObject("quitHighlightText", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -354,6 +384,16 @@ namespace BulletHell.Properties {
         internal static System.Drawing.Bitmap ServerName {
             get {
                 object obj = ResourceManager.GetObject("ServerName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ServerPortText {
+            get {
+                object obj = ResourceManager.GetObject("ServerPortText", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

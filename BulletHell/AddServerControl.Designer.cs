@@ -29,13 +29,13 @@ namespace BulletHell
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtServerName = new System.Windows.Forms.TextBox();
-            this.txtServerAddr = new System.Windows.Forms.TextBox();
             this.cancel2_option = new System.Windows.Forms.PictureBox();
             this.done_option = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textAddr = new wmgCMS.WaterMarkTextBox();
+            this.waterMarkTextBox1 = new wmgCMS.WaterMarkTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cancel2_option)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.done_option)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -43,31 +43,11 @@ namespace BulletHell
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtServerName
-            // 
-            this.txtServerName.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtServerName.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServerName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtServerName.Location = new System.Drawing.Point(342, 332);
-            this.txtServerName.Name = "txtServerName";
-            this.txtServerName.Size = new System.Drawing.Size(340, 33);
-            this.txtServerName.TabIndex = 3;
-            // 
-            // txtServerAddr
-            // 
-            this.txtServerAddr.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtServerAddr.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServerAddr.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtServerAddr.Location = new System.Drawing.Point(342, 478);
-            this.txtServerAddr.Name = "txtServerAddr";
-            this.txtServerAddr.Size = new System.Drawing.Size(340, 33);
-            this.txtServerAddr.TabIndex = 4;
-            // 
             // cancel2_option
             // 
             this.cancel2_option.BackgroundImage = global::BulletHell.Properties.Resources.Cancel2;
             this.cancel2_option.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel2_option.Location = new System.Drawing.Point(312, 626);
+            this.cancel2_option.Location = new System.Drawing.Point(317, 600);
             this.cancel2_option.Name = "cancel2_option";
             this.cancel2_option.Size = new System.Drawing.Size(399, 40);
             this.cancel2_option.TabIndex = 6;
@@ -80,7 +60,7 @@ namespace BulletHell
             // 
             this.done_option.BackgroundImage = global::BulletHell.Properties.Resources.Done;
             this.done_option.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.done_option.Location = new System.Drawing.Point(313, 566);
+            this.done_option.Location = new System.Drawing.Point(317, 540);
             this.done_option.Name = "done_option";
             this.done_option.Size = new System.Drawing.Size(399, 39);
             this.done_option.TabIndex = 5;
@@ -91,9 +71,9 @@ namespace BulletHell
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::BulletHell.Properties.Resources.ServerName;
+            this.pictureBox3.BackgroundImage = global::BulletHell.Properties.Resources.ServerPortText;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(421, 276);
+            this.pictureBox3.Location = new System.Drawing.Point(425, 387);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(182, 38);
             this.pictureBox3.TabIndex = 2;
@@ -103,7 +83,7 @@ namespace BulletHell
             // 
             this.pictureBox2.BackgroundImage = global::BulletHell.Properties.Resources.ServerAddress;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(396, 423);
+            this.pictureBox2.Location = new System.Drawing.Point(400, 259);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(232, 38);
             this.pictureBox2.TabIndex = 1;
@@ -113,21 +93,45 @@ namespace BulletHell
             // 
             this.pictureBox1.BackgroundImage = global::BulletHell.Properties.Resources.addServerTitle;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(238, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(242, 121);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(549, 117);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // textAddr
+            // 
+            this.textAddr.BackColor = System.Drawing.Color.White;
+            this.textAddr.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold);
+            this.textAddr.ForeColor = System.Drawing.Color.Black;
+            this.textAddr.Location = new System.Drawing.Point(346, 321);
+            this.textAddr.Name = "textAddr";
+            this.textAddr.Size = new System.Drawing.Size(340, 33);
+            this.textAddr.TabIndex = 14;
+            this.textAddr.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textAddr.WaterMarkText = "WIP (Join Server Fxnal)";
+            // 
+            // waterMarkTextBox1
+            // 
+            this.waterMarkTextBox1.BackColor = System.Drawing.Color.White;
+            this.waterMarkTextBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold);
+            this.waterMarkTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.waterMarkTextBox1.Location = new System.Drawing.Point(346, 448);
+            this.waterMarkTextBox1.Name = "waterMarkTextBox1";
+            this.waterMarkTextBox1.Size = new System.Drawing.Size(340, 33);
+            this.waterMarkTextBox1.TabIndex = 15;
+            this.waterMarkTextBox1.WaterMarkColor = System.Drawing.Color.Gray;
+            this.waterMarkTextBox1.WaterMarkText = "WIP (Join server fxnal)";
             // 
             // AddServerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.waterMarkTextBox1);
+            this.Controls.Add(this.textAddr);
             this.Controls.Add(this.cancel2_option);
             this.Controls.Add(this.done_option);
-            this.Controls.Add(this.txtServerAddr);
-            this.Controls.Add(this.txtServerName);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -148,9 +152,9 @@ namespace BulletHell
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox txtServerName;
-        private System.Windows.Forms.TextBox txtServerAddr;
         private System.Windows.Forms.PictureBox done_option;
         private System.Windows.Forms.PictureBox cancel2_option;
+        private wmgCMS.WaterMarkTextBox textAddr;
+        private wmgCMS.WaterMarkTextBox waterMarkTextBox1;
     }
 }

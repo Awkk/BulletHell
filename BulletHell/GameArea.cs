@@ -27,11 +27,14 @@ namespace BulletHell {
         public const int GameAreaHeight = 700;
 
         private readonly Game game;
-        private Form menu;
-        public Stopwatch StopWatch { get; set; }
 
-        public GameArea(Form menu) {
+        private Form menu;
+        Stopwatch sw;
+        Timer timer;
+        public GameArea(Form menu, string txtAddr1, int txtPort1) {
+
             InitializeComponent();
+
             FormClosing += new FormClosingEventHandler(GameArea_FormClosing);
 
             this.menu = menu;
@@ -48,13 +51,22 @@ namespace BulletHell {
                 Interval = 10
             };
 
+            sw = new Stopwatch();
 
-            GameTime.Tick += new EventHandler(UpdateTime);
+            StopwatchUsingMethod();
+
+            Renderer renderer = new Renderer();
+            GameTime.Tick += new EventHandler(renderer.Update);
 
             game = new Game(this);
 
             // Backgroud thread listening for packets
-            IListener listener = new UDPListener("224.168.100.2", 11000);
+
+            string txtAddress = txtAddr1;
+            int txtPort = txtPort1;
+
+
+            IListener listener = new UDPListener(txtAddress, txtPort);
             listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
 
             Thread recieveMessageThread = new Thread(new ThreadStart(listener.ReceiveMessage)) {
@@ -62,14 +74,14 @@ namespace BulletHell {
             };
             recieveMessageThread.Start();
 
-            ISender sender = new UDPSender("224.168.100.2", 11000);
+            ISender sender = new UDPSender(txtAddress, txtPort);
             Server = new GameServer(game, sender);
         }
+
 
         public void MessageRecieved(object sender, string message) {
             Server.ProcessMessage(message);
         }
-
 
         void ChangeCursor() {
             Bitmap bmp = new Bitmap(Properties.Resources.p1cursor);
@@ -81,6 +93,7 @@ namespace BulletHell {
         }
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
+            sw.Stop();
             game.GameOver();
             UDPListener.Done = true;
             menu.Show();
@@ -95,7 +108,38 @@ namespace BulletHell {
         public void UpdateTime(object sender, EventArgs e) {
             LabelSurvived.Text = "Survived: " + StopWatch.Elapsed.TotalSeconds + " s";
         }
+
+        public void setDeathControlVisible(Boolean flag)
+        {
+            this.deathScreenControl1.Visible = flag;
+            TimeSpan timeTaken = sw.Elapsed;
+            string foo = "Time taken before death: " + timeTaken.ToString(@"m\:ss\.fff") + " seconds";
+            deathScreenControl1.showResults(foo);
+        }
+        
+        public void StopwatchUsingMethod()
+        {
+            timer = new Timer();
+            timer.Interval = (1000);
+            timer.Tick += new EventHandler(timer_Tick);
+            sw = new Stopwatch();
+            timer.Start();
+            sw.Start();
+
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = sw.Elapsed.Seconds.ToString() + " seconds";
+            Application.DoEvents();
+        }
+
+        //Messagebox is spammed due to GameOver state being spammed
+        public void StopwatchUsingMethod1()
+        {
+            timer.Stop();
+            sw.Stop();
+                              }
     }
+   }
 
-
-}

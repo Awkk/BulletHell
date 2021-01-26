@@ -29,31 +29,45 @@ namespace BulletHell
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cancel2_option = new System.Windows.Forms.PictureBox();
             this.done_option = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textAddr = new wmgCMS.WaterMarkTextBox();
+            this.textPort = new wmgCMS.WaterMarkTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancel2_option)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.done_option)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // pictureBox3
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(297, 334);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(399, 199);
-            this.listBox1.TabIndex = 2;
+            this.pictureBox3.BackgroundImage = global::BulletHell.Properties.Resources.ServerPortText;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(403, 395);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(182, 38);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::BulletHell.Properties.Resources.ServerAddress;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(378, 263);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(232, 38);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // cancel2_option
             // 
             this.cancel2_option.BackgroundImage = global::BulletHell.Properties.Resources.Cancel2;
             this.cancel2_option.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel2_option.Location = new System.Drawing.Point(298, 638);
+            this.cancel2_option.Location = new System.Drawing.Point(298, 611);
             this.cancel2_option.Name = "cancel2_option";
             this.cancel2_option.Size = new System.Drawing.Size(399, 40);
             this.cancel2_option.TabIndex = 8;
@@ -66,7 +80,7 @@ namespace BulletHell
             // 
             this.done_option.BackgroundImage = global::BulletHell.Properties.Resources.Done;
             this.done_option.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.done_option.Location = new System.Drawing.Point(298, 578);
+            this.done_option.Location = new System.Drawing.Point(298, 551);
             this.done_option.Name = "done_option";
             this.done_option.Size = new System.Drawing.Size(399, 39);
             this.done_option.TabIndex = 7;
@@ -75,52 +89,72 @@ namespace BulletHell
             this.done_option.MouseLeave += new System.EventHandler(this.done_option_MouseLeave);
             this.done_option.MouseHover += new System.EventHandler(this.done_option_MouseHover);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::BulletHell.Properties.Resources.ServersList;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(428, 274);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(133, 38);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::BulletHell.Properties.Resources.JoinServerTitle;
+            this.pictureBox1.BackgroundImage = global::BulletHell.Properties.Resources.picturetopeople_org_8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 117);
+            this.pictureBox1.Location = new System.Drawing.Point(215, 117);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(561, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(569, 127);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // textAddr
+            // 
+            this.textAddr.BackColor = System.Drawing.Color.White;
+            this.textAddr.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold);
+            this.textAddr.ForeColor = System.Drawing.Color.Black;
+            this.textAddr.Location = new System.Drawing.Point(324, 324);
+            this.textAddr.Name = "textAddr";
+            this.textAddr.Size = new System.Drawing.Size(340, 33);
+            this.textAddr.TabIndex = 13;
+            this.textAddr.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textAddr.WaterMarkText = "eg. 224.168.100.2";
+            // 
+            // textPort
+            // 
+            this.textPort.BackColor = System.Drawing.Color.White;
+            this.textPort.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold);
+            this.textPort.ForeColor = System.Drawing.Color.Black;
+            this.textPort.Location = new System.Drawing.Point(324, 456);
+            this.textPort.Name = "textPort";
+            this.textPort.Size = new System.Drawing.Size(340, 33);
+            this.textPort.TabIndex = 14;
+            this.textPort.WaterMarkColor = System.Drawing.Color.Gray;
+            this.textPort.WaterMarkText = "eg. 11000";
             // 
             // JoinServerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.textPort);
+            this.Controls.Add(this.textAddr);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cancel2_option);
             this.Controls.Add(this.done_option);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "JoinServerControl";
             this.Size = new System.Drawing.Size(1025, 735);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cancel2_option)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.done_option)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PictureBox cancel2_option;
         private System.Windows.Forms.PictureBox done_option;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private wmgCMS.WaterMarkTextBox textAddr;
+        private wmgCMS.WaterMarkTextBox textPort;
     }
 }

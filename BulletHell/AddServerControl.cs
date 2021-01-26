@@ -58,8 +58,10 @@ namespace BulletHell
         private void done_option_Click(object sender, EventArgs e)
         {
             ParentForm.Hide();
-            GameArea game = new GameArea(ParentForm);
+            GameArea game = new GameArea(ParentForm, "224.168.100.2", 11000);
             game.Show();
         }
+
+
     }
 }
