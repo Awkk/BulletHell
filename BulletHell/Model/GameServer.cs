@@ -47,11 +47,23 @@ namespace BulletHell.Model {
                         }
                     }
                     break;
+                case "Start":
+                    game.Start();
+                    break;
+                case "GameOver":
+                    game.GameOver();
+                    break;
             }
         }
         public void SendPlayerLocation(int x, int y) {
             // Debug.WriteLine("Send: " + x + "," + y);
             Sender.Send($"P:{id}:{x},{y}");
+        }
+        public void SendGameStart() {
+            Sender.Send("Start:0:0,0");
+        }
+        public void SendGameOver() {
+            Sender.Send("GameOver:0:0,0");
         }
 
     }

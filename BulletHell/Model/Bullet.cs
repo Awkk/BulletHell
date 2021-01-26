@@ -23,10 +23,10 @@ namespace BulletHell.Model {
             if (GameLogic.Collision(this, game.Player)) {
                 game.GameOver();
             }
-            if (GameLogic.OutOfBorder(this)) {
+/*            if (GameLogic.OutOfBorder(this)) {
                 GameArea.Controls.Remove(Body);
                 GameArea.GameTime.Tick -= Handler;
-            }
+            }*/
         }
     }
 }

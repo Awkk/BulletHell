@@ -56,6 +56,7 @@
     <Compile Include="AddServerControl.Designer.cs">
       <DependentUpon>AddServerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\BounceOffWall.cs" />
     <Compile Include="Controller\Remote.cs" />
     <Compile Include="Controller\StraightLine.cs" />
     <Compile Include="Controller\IController.cs" />

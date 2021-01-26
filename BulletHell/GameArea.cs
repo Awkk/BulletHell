@@ -25,8 +25,8 @@ namespace BulletHell {
 
         public GameServer Server { get; private set; }
 
-        public const int GameAreaWidth = 1025;
-        public const int GameAreaHeight = 720;
+        public const int GameAreaWidth = 700;
+        public const int GameAreaHeight = 700;
 
         private readonly Game game;
 
@@ -39,7 +39,7 @@ namespace BulletHell {
             StartPosition = FormStartPosition.CenterScreen;
 
             GameTime = new Timer {
-                Interval = 50
+                Interval = 10
             };
 
             Renderer renderer = new Renderer();
@@ -76,12 +76,11 @@ namespace BulletHell {
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
             game.GameOver();
-            Server.Sender.Close();
         }
 
         private void GameArea_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode == Keys.Space) {
-                game.Start();
+                Server.SendGameStart();
             }
         }
     }
