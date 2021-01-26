@@ -56,11 +56,10 @@
     <Compile Include="AddServerControl.Designer.cs">
       <DependentUpon>AddServerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\Remote.cs" />
     <Compile Include="Controller\StraightLine.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\FollowCursor.cs" />
-    <Compile Include="Controller\UdpSender.cs" />
-    <Compile Include="Controller\WebSocket.cs" />
     <Compile Include="GameMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,7 +87,9 @@
     <Compile Include="GameArea.Designer.cs">
       <DependentUpon>GameArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\GameClient.cs" />
     <Compile Include="Model\GameObject.cs" />
+    <Compile Include="Model\GameServer.cs" />
     <Compile Include="Model\GameState.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="OptionControl.cs">

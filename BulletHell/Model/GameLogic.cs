@@ -15,8 +15,8 @@ namespace BulletHell.Model {
         public static bool OutOfBorder(GameObject obj) {
             Point location = obj.Location;
             return location.X < 0 || location.Y < 0 ||
-                location.X > GameArea.MainForm.Width ||
-                location.Y > GameArea.MainForm.Height;
+                location.X > obj.GameArea.Width ||
+                location.Y > obj.GameArea.Height;
         }
     }
 }

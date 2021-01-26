@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BulletHell.Model;
 
 namespace BulletHell.Controller {
-    interface IController {
+    public interface IController {
         void UpdateLocation(GameObject obj);
     }
 }

@@ -12,12 +12,12 @@ using BulletHell.Model;
 namespace BulletHell.View {
     class Renderer {
         public void Update(object sender, EventArgs e) {
-            switch (GameArea.State) {
+/*            switch (GameArea.State) {
                 case GameState.InPlay:
                     break;
                 case GameState.GameOver:
                     break;
-            }
+            }*/
         }
     }
 }
