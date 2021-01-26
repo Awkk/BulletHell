@@ -39,7 +39,7 @@ namespace BulletHell {
             StartPosition = FormStartPosition.CenterScreen;
 
             GameTime = new Timer {
-                Interval = 50
+                Interval = 10
             };
 
             Renderer renderer = new Renderer();

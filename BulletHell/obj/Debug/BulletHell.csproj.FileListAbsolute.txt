@@ -23,4 +23,4 @@ C:\Users\kimer\source\repos\BulletHellFinal\BulletHell\obj\Debug\BulletHell.cspr
 C:\Users\kimer\source\repos\BulletHellFinal\BulletHell\obj\Debug\BulletHell.csproj.CopyComplete
 C:\Users\kimer\source\repos\BulletHellFinal\BulletHell\obj\Debug\BulletHell.exe
 C:\Users\kimer\source\repos\BulletHellFinal\BulletHell\obj\Debug\BulletHell.pdb
-C:\Users\kimer\source\repos\BulletHellFinal\BulletHell\obj\Debug\BulletHell.WinScreenControl.resources
+C:\Users\kimer\source\repos\BulletHellFinal\BulletHell\obj\Debug\BulletHell.DeathScreenControl.resources
