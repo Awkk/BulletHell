@@ -90,16 +90,15 @@ namespace BulletHell {
         }
 
         private void add_option_Click(object sender, EventArgs e) {
-            /*            if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("AddServerControl"))
+                        if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("AddServerControl"))
                         {
                             AddServerControl asc = new AddServerControl();
                             asc.Dock = DockStyle.Fill;
                             GameMenu.Instance.PnlContainer.Controls.Add(asc);
                         }
-                        GameMenu.Instance.PnlContainer.Controls["AddServerControl"].BringToFront();*/
+                        GameMenu.Instance.PnlContainer.Controls["AddServerControl"].BringToFront();
 
-            GameArea game = new GameArea();
-            game.Show();
+            
         }
 
         private void join_option_Click(object sender, EventArgs e) {

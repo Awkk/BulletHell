@@ -211,6 +211,16 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gameOverText {
+            get {
+                object obj = ResourceManager.GetObject("gameOverText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap JoinServer {
             get {
                 object obj = ResourceManager.GetObject("JoinServer", resourceCulture);
@@ -234,6 +244,16 @@ namespace BulletHell.Properties {
         internal static System.Drawing.Bitmap JoinServerTitle {
             get {
                 object obj = ResourceManager.GetObject("JoinServerTitle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mainMenuText {
+            get {
+                object obj = ResourceManager.GetObject("mainMenuText", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -311,6 +331,16 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quitText {
+            get {
+                object obj = ResourceManager.GetObject("quitText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ServerAddress {
             get {
                 object obj = ResourceManager.GetObject("ServerAddress", resourceCulture);
@@ -364,6 +394,16 @@ namespace BulletHell.Properties {
         internal static System.Drawing.Bitmap soundText {
             get {
                 object obj = ResourceManager.GetObject("soundText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap youWinText {
+            get {
+                object obj = ResourceManager.GetObject("youWinText", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

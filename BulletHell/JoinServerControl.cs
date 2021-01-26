@@ -53,6 +53,10 @@ namespace BulletHell
             GameMenu.Instance.PnlContainer.Controls["MainControl"].BringToFront();
         }
 
-
+        private void done_option_Click(object sender, EventArgs e)
+        {
+            GameArea game = new GameArea();
+            game.Show();
+        }
     }
 }

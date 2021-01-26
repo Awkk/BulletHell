@@ -71,6 +71,7 @@ namespace BulletHell
             this.done_option.Size = new System.Drawing.Size(399, 39);
             this.done_option.TabIndex = 7;
             this.done_option.TabStop = false;
+            this.done_option.Click += new System.EventHandler(this.done_option_Click);
             this.done_option.MouseLeave += new System.EventHandler(this.done_option_MouseLeave);
             this.done_option.MouseHover += new System.EventHandler(this.done_option_MouseHover);
             // 
