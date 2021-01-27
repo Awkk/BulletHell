@@ -88,7 +88,7 @@ namespace BulletHell
             this.options_option.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("options_option.BackgroundImage")));
             this.options_option.Cursor = System.Windows.Forms.Cursors.Hand;
             this.options_option.Image = global::BulletHell.Properties.Resources.OptionsOption;
-            this.options_option.Location = new System.Drawing.Point(383, 399);
+            this.options_option.Location = new System.Drawing.Point(383, 398);
             this.options_option.Name = "options_option";
             this.options_option.Size = new System.Drawing.Size(196, 41);
             this.options_option.TabIndex = 10;
@@ -100,11 +100,11 @@ namespace BulletHell
             // add_option
             // 
             this.add_option.BackColor = System.Drawing.Color.Transparent;
-            this.add_option.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_option.BackgroundImage")));
+            this.add_option.BackgroundImage = global::BulletHell.Properties.Resources.DirectConnectionText;
             this.add_option.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_option.Location = new System.Drawing.Point(382, 251);
             this.add_option.Name = "add_option";
-            this.add_option.Size = new System.Drawing.Size(199, 41);
+            this.add_option.Size = new System.Drawing.Size(199, 39);
             this.add_option.TabIndex = 10;
             this.add_option.TabStop = false;
             this.add_option.Click += new System.EventHandler(this.add_option_Click);
@@ -114,10 +114,10 @@ namespace BulletHell
             // join_option
             // 
             this.join_option.BackColor = System.Drawing.Color.Transparent;
-            this.join_option.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("join_option.BackgroundImage")));
+            this.join_option.BackgroundImage = global::BulletHell.Properties.Resources.MultiplayerText;
             this.join_option.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.join_option.Image = ((System.Drawing.Image)(resources.GetObject("join_option.Image")));
-            this.join_option.Location = new System.Drawing.Point(383, 324);
+            this.join_option.Image = global::BulletHell.Properties.Resources.MultiplayerText;
+            this.join_option.Location = new System.Drawing.Point(383, 323);
             this.join_option.Name = "join_option";
             this.join_option.Size = new System.Drawing.Size(199, 41);
             this.join_option.TabIndex = 7;

@@ -28,13 +28,13 @@ namespace BulletHell {
 
         //Menu pictureBox mouse hover/leave effect
         private void add_option_MouseHover(object sender, EventArgs e) {
-            add_option.Image = Properties.Resources.AddServerHighlight;
+            add_option.Image = Properties.Resources.DirectConnectionHighlight;
 
             buttonSound.Play();
         }
 
         private void join_option_MouseHover(object sender, EventArgs e) {
-            join_option.Image = Properties.Resources.JoinServerHighlight;
+            join_option.Image = Properties.Resources.MultiplayerHighlight;
 
             buttonSound.Play();
         }
@@ -53,13 +53,13 @@ namespace BulletHell {
         }
 
         private void add_option_MouseLeave(object sender, EventArgs e) {
-            add_option.Image = Properties.Resources.AddServer;
+            add_option.Image = Properties.Resources.DirectConnectionText;
 
 
         }
 
         private void join_option_MouseLeave(object sender, EventArgs e) {
-            join_option.Image = Properties.Resources.JoinServer;
+            join_option.Image = Properties.Resources.MultiplayerText;
 
 
         }
@@ -90,23 +90,23 @@ namespace BulletHell {
         }
 
         private void add_option_Click(object sender, EventArgs e) {
-            if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("AddServerControl")) {
-                AddServerControl asc = new AddServerControl();
+            if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("LocalPlayControl")) {
+                LocalPlayControl asc = new LocalPlayControl();
                 asc.Dock = DockStyle.Fill;
                 GameMenu.Instance.PnlContainer.Controls.Add(asc);
             }
-            GameMenu.Instance.PnlContainer.Controls["AddServerControl"].BringToFront();
+            GameMenu.Instance.PnlContainer.Controls["LocalPlayControl"].BringToFront();
 
 
         }
 
         private void join_option_Click(object sender, EventArgs e) {
-            if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("JoinServerControl")) {
-                JoinServerControl jsc = new JoinServerControl();
+            if (!GameMenu.Instance.PnlContainer.Controls.ContainsKey("WebPlayControl")) {
+                WebPlayControl jsc = new WebPlayControl();
                 jsc.Dock = DockStyle.Fill;
                 GameMenu.Instance.PnlContainer.Controls.Add(jsc);
             }
-            GameMenu.Instance.PnlContainer.Controls["JoinServerControl"].BringToFront();
+            GameMenu.Instance.PnlContainer.Controls["WebPlayControl"].BringToFront();
         }
     }
 
