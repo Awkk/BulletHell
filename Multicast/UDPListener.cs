@@ -11,7 +11,7 @@ using Network;
 namespace UDP {
     public class UDPListener : IListener {
         private UdpClient udpclient;
-        public static bool Done { get; set; }
+        public bool Done { get; set; }
         public UDPListener(string ipAddress, int port) {
             try {
 

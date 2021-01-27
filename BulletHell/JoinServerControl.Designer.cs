@@ -48,7 +48,7 @@ namespace BulletHell
             this.pictureBox3.BackgroundImage = global::BulletHell.Properties.Resources.ServerPortText;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(806, 760);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(364, 73);
             this.pictureBox3.TabIndex = 10;
@@ -59,7 +59,7 @@ namespace BulletHell
             this.pictureBox2.BackgroundImage = global::BulletHell.Properties.Resources.ServerAddress;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(756, 506);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(464, 73);
             this.pictureBox2.TabIndex = 9;
@@ -70,7 +70,7 @@ namespace BulletHell
             this.cancel2_option.BackgroundImage = global::BulletHell.Properties.Resources.Cancel2;
             this.cancel2_option.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel2_option.Location = new System.Drawing.Point(596, 1175);
-            this.cancel2_option.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cancel2_option.Margin = new System.Windows.Forms.Padding(6);
             this.cancel2_option.Name = "cancel2_option";
             this.cancel2_option.Size = new System.Drawing.Size(798, 77);
             this.cancel2_option.TabIndex = 8;
@@ -84,7 +84,7 @@ namespace BulletHell
             this.done_option.BackgroundImage = global::BulletHell.Properties.Resources.Done;
             this.done_option.Cursor = System.Windows.Forms.Cursors.Hand;
             this.done_option.Location = new System.Drawing.Point(596, 1060);
-            this.done_option.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.done_option.Margin = new System.Windows.Forms.Padding(6);
             this.done_option.Name = "done_option";
             this.done_option.Size = new System.Drawing.Size(798, 75);
             this.done_option.TabIndex = 7;
@@ -98,7 +98,7 @@ namespace BulletHell
             this.pictureBox1.BackgroundImage = global::BulletHell.Properties.Resources.picturetopeople_org_8c7ccf731aa40abd955584ea57b6ac40134a900b8f0753bd7e;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(430, 225);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1138, 244);
             this.pictureBox1.TabIndex = 0;
@@ -110,11 +110,11 @@ namespace BulletHell
             this.textAddr.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold);
             this.textAddr.ForeColor = System.Drawing.Color.Black;
             this.textAddr.Location = new System.Drawing.Point(648, 623);
-            this.textAddr.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textAddr.Margin = new System.Windows.Forms.Padding(6);
             this.textAddr.Name = "textAddr";
             this.textAddr.Size = new System.Drawing.Size(676, 58);
             this.textAddr.TabIndex = 13;
-            this.textAddr.Text = "224.168.100.2";
+            this.textAddr.Text = "localhost";
             this.textAddr.WaterMarkColor = System.Drawing.Color.Gray;
             this.textAddr.WaterMarkText = "eg. 224.168.100.2";
             this.textAddr.TextChanged += new System.EventHandler(this.textAddr_TextChanged);
@@ -125,13 +125,14 @@ namespace BulletHell
             this.textPort.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Bold);
             this.textPort.ForeColor = System.Drawing.Color.Black;
             this.textPort.Location = new System.Drawing.Point(648, 877);
-            this.textPort.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textPort.Margin = new System.Windows.Forms.Padding(6);
             this.textPort.Name = "textPort";
             this.textPort.Size = new System.Drawing.Size(676, 58);
             this.textPort.TabIndex = 14;
-            this.textPort.Text = "11000";
+            this.textPort.Text = "8080";
             this.textPort.WaterMarkColor = System.Drawing.Color.Gray;
             this.textPort.WaterMarkText = "eg. 11000";
+            this.textPort.TextChanged += new System.EventHandler(this.textPort_TextChanged);
             // 
             // JoinServerControl
             // 
@@ -145,7 +146,7 @@ namespace BulletHell
             this.Controls.Add(this.cancel2_option);
             this.Controls.Add(this.done_option);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "JoinServerControl";
             this.Size = new System.Drawing.Size(2050, 1413);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

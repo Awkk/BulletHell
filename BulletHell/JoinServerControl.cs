@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.SignalR.Client;
+using Network;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,10 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebSocket;
 
 namespace BulletHell
 {
@@ -64,11 +68,24 @@ namespace BulletHell
             }
 
             ParentForm.Hide();
-            GameArea game = new GameArea(ParentForm, textAddr.Text, Int32.Parse(textPort.Text));
+
+            string url = $"http://{textAddr.Text}:{textPort.Text}/";
+            var connection = new HubConnection(url);
+            IHubProxy hubProxy = connection.CreateHubProxy("GameHub");
+            connection.Start().Wait();
+
+            IListener udplistener = new WebSocketListener(hubProxy);
+            ISender udpsender = new WebSocketSender(hubProxy);
+
+            GameArea game = new GameArea(ParentForm, udplistener, udpsender);
             game.Show();
         }
 
         private void textAddr_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void textPort_TextChanged(object sender, EventArgs e) {
 
         }
 

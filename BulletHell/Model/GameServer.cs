@@ -28,6 +28,7 @@ namespace BulletHell.Model {
         }
 
         public void ProcessMessage(string message) {
+            //Debug.WriteLine("\n" + i++ + ": " + message + "\n");
             string[] splited = message.Split(':');
             string request = splited[0];
             string senderId = splited[1];
@@ -35,7 +36,7 @@ namespace BulletHell.Model {
             switch (request) {
                 case "P":
                     if (senderId != id) {
-                        Debug.WriteLine("\n" + i++ + ": " + message + "\n");
+                        //Debug.WriteLine("\n" + i++ + ": " + message + "\n");
                         string[] xy = location.Split(',');
                         if (!PlayerLocation.ContainsKey(senderId)) {
                             Player player = new Player();
@@ -53,7 +54,7 @@ namespace BulletHell.Model {
                 case "GameOver":
                     game.GameArea.GameTime.Enabled = false;
                     game.GameArea.StopWatch.Stop();
-                    game.ShowDeathControlVisible();
+                    game.GameArea.SetDeathControlVisible(true);
                     break;
             }
         }

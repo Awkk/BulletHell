@@ -8,6 +8,8 @@ namespace Network {
 
     public delegate void MessageRecievedHandler(object sender, string message);
     public interface IListener {
+        bool Done { get; set; }
+
         event MessageRecievedHandler MessageRecieved;
 
         void ReceiveMessage();

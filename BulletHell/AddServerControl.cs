@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Network;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UDP;
 
 namespace BulletHell {
     public partial class AddServerControl : UserControl {
@@ -48,7 +50,9 @@ namespace BulletHell {
 
         private void done_option_Click(object sender, EventArgs e) {
             ParentForm.Hide();
-            GameArea game = new GameArea(ParentForm, textAddr.Text, int.Parse(waterMarkTextBox1.Text));
+            IListener udplistener = new UDPListener(textAddr.Text, int.Parse(waterMarkTextBox1.Text));
+            ISender udpsender = new UDPSender(textAddr.Text, int.Parse(waterMarkTextBox1.Text));
+            GameArea game = new GameArea(ParentForm, udplistener, udpsender);
             game.Show();
         }
 

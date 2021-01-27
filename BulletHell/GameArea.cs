@@ -30,8 +30,10 @@ namespace BulletHell {
 
         private readonly Game game;
 
+        private IListener listener;
+
         private Form menu;
-        public GameArea(Form menu, string txtAddr1, int txtPort1) {
+        public GameArea(Form menu, IListener listener, ISender sender) {
 
             InitializeComponent();
 
@@ -55,11 +57,8 @@ namespace BulletHell {
 
             game = new Game(this);
 
-            string txtAddress = txtAddr1;
-            int txtPort = txtPort1;
 
-
-            IListener listener = new UDPListener(txtAddress, txtPort);
+            this.listener = listener;
             listener.MessageRecieved += new MessageRecievedHandler(MessageRecieved);
 
             Thread recieveMessageThread = new Thread(new ThreadStart(listener.ReceiveMessage)) {
@@ -67,7 +66,6 @@ namespace BulletHell {
             };
             recieveMessageThread.Start();
 
-            ISender sender = new UDPSender(txtAddress, txtPort);
             Server = new GameServer(game, sender);
         }
 
@@ -87,7 +85,7 @@ namespace BulletHell {
 
         private void GameArea_FormClosing(object sender, FormClosingEventArgs e) {
             game.GameOver();
-            UDPListener.Done = true;
+            listener.Done = true;
             menu.Show();
         }
 
@@ -101,13 +99,16 @@ namespace BulletHell {
             lblTimer.Text = "Survived: " + StopWatch.Elapsed.TotalSeconds + " s";
         }
 
-        public void setDeathControlVisible(bool flag)
-        {
-            this.deathScreenControl1.Visible = flag;
-            TimeSpan timeTaken = StopWatch.Elapsed;
-            string foo = "Time taken before death: " + timeTaken.ToString(@"m\:ss\.fff") + " seconds";
-            deathScreenControl1.showResults(foo);
+        public void SetDeathControlVisible(bool flag) {
+            if (deathScreenControl1.InvokeRequired) {
+                try {
+                    deathScreenControl1.Invoke(new Action(() => deathScreenControl1.Visible = flag));
+                } catch (ObjectDisposedException) {
+                }
+            } else {
+                deathScreenControl1.Visible = flag;
+            }
         }
     }
-   }
+}
 
