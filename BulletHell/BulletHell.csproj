@@ -82,11 +82,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddServerControl.cs">
+    <Compile Include="LocalPlayControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddServerControl.Designer.cs">
-      <DependentUpon>AddServerControl.cs</DependentUpon>
+    <Compile Include="LocalPlayControl.Designer.cs">
+      <DependentUpon>LocalPlayControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\BounceOffWall.cs" />
     <Compile Include="Controller\Remote.cs" />
@@ -106,11 +106,11 @@
       <DependentUpon>GameMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfaceJoin.cs" />
-    <Compile Include="JoinServerControl.cs">
+    <Compile Include="WebPlayControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="JoinServerControl.Designer.cs">
-      <DependentUpon>JoinServerControl.cs</DependentUpon>
+    <Compile Include="WebPlayControl.Designer.cs">
+      <DependentUpon>WebPlayControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MainControl.cs">
       <SubType>UserControl</SubType>
@@ -154,8 +154,8 @@
     <Compile Include="WinScreenControl.Designer.cs">
       <DependentUpon>WinScreenControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddServerControl.resx">
-      <DependentUpon>AddServerControl.cs</DependentUpon>
+    <EmbeddedResource Include="LocalPlayControl.resx">
+      <DependentUpon>LocalPlayControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeathScreenControl.resx">
       <DependentUpon>DeathScreenControl.cs</DependentUpon>
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="GameMenu.resx">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JoinServerControl.resx">
-      <DependentUpon>JoinServerControl.cs</DependentUpon>
+    <EmbeddedResource Include="WebPlayControl.resx">
+      <DependentUpon>WebPlayControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
@@ -243,6 +243,12 @@
     <None Include="Resources\gameOverText1.png" />
     <None Include="Resources\mainMenuText1.png" />
     <None Include="Resources\MmHighlightText.png" />
+    <None Include="Resources\OnlinePlayText.png" />
+    <None Include="Resources\LocalPlayText.png" />
+    <None Include="Resources\DirectConnectionText.png" />
+    <None Include="Resources\DirectConnectionHighlight.png" />
+    <None Include="Resources\MultiplayerText.png" />
+    <None Include="Resources\MultiplayerHighlight.png" />
     <Content Include="Resources\OptionsHighlight.png" />
     <None Include="Resources\DirectConnect.png" />
     <None Include="Resources\AddServer.png" />

@@ -191,6 +191,26 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DirectConnectionHighlight {
+            get {
+                object obj = ResourceManager.GetObject("DirectConnectionHighlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DirectConnectionText {
+            get {
+                object obj = ResourceManager.GetObject("DirectConnectionText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Done {
             get {
                 object obj = ResourceManager.GetObject("Done", resourceCulture);
@@ -251,6 +271,16 @@ namespace BulletHell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LocalPlayText {
+            get {
+                object obj = ResourceManager.GetObject("LocalPlayText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mainMenuText {
             get {
                 object obj = ResourceManager.GetObject("mainMenuText", resourceCulture);
@@ -274,6 +304,36 @@ namespace BulletHell.Properties {
         internal static System.Drawing.Bitmap MmHighlightText {
             get {
                 object obj = ResourceManager.GetObject("MmHighlightText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MultiplayerHighlight {
+            get {
+                object obj = ResourceManager.GetObject("MultiplayerHighlight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MultiplayerText {
+            get {
+                object obj = ResourceManager.GetObject("MultiplayerText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OnlinePlayText {
+            get {
+                object obj = ResourceManager.GetObject("OnlinePlayText", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
