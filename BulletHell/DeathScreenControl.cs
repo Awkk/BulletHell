@@ -21,16 +21,8 @@ namespace BulletHell {
         }
         public DeathScreenControl() {
             InitializeComponent();
-            blink_timer.Start();
             buttonSound = new SoundPlayer(GetResoucePath("buttonSound.wav"));
-
-            GameArea parentForm = (this.Parent as GameArea);
-
-
-        }
-
-        private void blink_Tick(object sender, EventArgs e) {
-            text_gameover.Visible = !text_gameover.Visible;
+            text_gameover.BackColor = Color.Transparent;
         }
 
         private void text_mm_Click(object sender, EventArgs e) {
@@ -39,10 +31,6 @@ namespace BulletHell {
 
         private void text_quit_Click(object sender, EventArgs e) {
             Application.Exit();
-        }
-
-        private void visibility(object sender, EventArgs e) {
-            this.Visible = true;
         }
 
         private void text_mm_MouseHover(object sender, EventArgs e) {
@@ -62,9 +50,12 @@ namespace BulletHell {
 
         }
 
-        public string showResults(string result) {
-            result_lbl.Text = result;
-            return result;
+        private void DeathScreenControl_Load(object sender, EventArgs e) {
+            
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e) {
+            //empty implementation
         }
     }
 }
