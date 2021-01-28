@@ -6,7 +6,7 @@ using Microsoft.Owin.Cors;
 using Microsoft.AspNet.SignalR.Hubs;
 
 namespace SignalRHub {
-    class GameHub {
+    public class GameHub {
         static void Main(string[] args) {
             string url = @"http://localhost:8080/";
             using (WebApp.Start<Startup>(url)) {
@@ -16,11 +16,11 @@ namespace SignalRHub {
         }
     }
 
-    class Startup {
+    public class Startup {
         public void Configuration(IAppBuilder app) {
             app.UseCors(CorsOptions.AllowAll);
-            //app.MapSignalR();
-            app.MapAzureSignalR(this.GetType().FullName);
+            app.MapSignalR();
+            //app.MapAzureSignalR(this.GetType().FullName);
         }
     }
     [HubName("GameHub")]
