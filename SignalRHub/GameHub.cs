@@ -19,7 +19,8 @@ namespace SignalRHub {
     class Startup {
         public void Configuration(IAppBuilder app) {
             app.UseCors(CorsOptions.AllowAll);
-            app.MapSignalR();
+            //app.MapSignalR();
+            app.MapAzureSignalR(this.GetType().FullName);
         }
     }
     [HubName("GameHub")]
@@ -28,15 +29,6 @@ namespace SignalRHub {
         public void Broadcast(string message) {
             Console.WriteLine(message);
             Clients.All.addMessage(message);
-        }
-        public void Send(string name, string message) {
-            Clients.All.addMessage(name, message);
-        }
-
-        public void DetermineLength(string message) {
-            Console.WriteLine(message);
-            string newMessage = string.Format(@"{0} has a length of: {1}", message, message.Length);
-            Clients.All.ReceiveLength(newMessage);
         }
     }
 }
