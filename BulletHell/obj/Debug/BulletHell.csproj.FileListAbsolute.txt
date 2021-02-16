@@ -48,3 +48,12 @@ C:\Users\kimer\source\repos\BulletHellMain\BulletHell\obj\Debug\BulletHell.cspro
 C:\Users\kimer\source\repos\BulletHellMain\BulletHell\obj\Debug\BulletHell.csproj.CopyComplete
 C:\Users\kimer\source\repos\BulletHellMain\BulletHell\obj\Debug\BulletHell.exe
 C:\Users\kimer\source\repos\BulletHellMain\BulletHell\obj\Debug\BulletHell.pdb
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\BulletHell.exe
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\BulletHell.pdb
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\Multicast.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\Network.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\WebSocket.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\Interop.WMPLib.dll
+C:\Users\Andrew\source\repos\BulletHell\BulletHell\bin\Debug\AxInterop.WMPLib.dll
